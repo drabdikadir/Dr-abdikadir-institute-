@@ -1,237 +1,730 @@
  <!DOCTYPE html>
-<html lang="so">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Abdikadir Career Development Institute</title>
+    <title>Dr. Abdikadir Institute | Professional Training & Career Development</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        html { scroll-behavior: smooth; }
-
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.6; }
-        
-        /* Header-ka */
-        header { 
-            background: linear-gradient(135deg, #003366, #00509d); 
-            color: white; 
-            padding: 15px 20px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            flex-wrap: wrap;
-            gap: 15px;
+        :root {
+            --primary: #0A2540;
+            --accent: #D4AF37;
+            --accent-hover: #b89528;
+            --bg-light: #F8FAFC;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --white: #FFFFFF;
+            --status-available: #10B981;
+            --status-upcoming: #F59E0B;
+            --status-area: #3B82F6;
         }
 
-        .logo-container { display: flex; align-items: center; gap: 15px; }
-        .logo-container img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #ffc107; background-color: white; }
-        .header-title h1 { font-size: 20px; line-height: 1.2; }
-        .header-contact { font-size: 13px; text-align: right; }
-        .header-contact a { color: #ffc107; text-decoration: none; }
-        
-        /* Navigation Menu */
-        nav { background-color: #001f3f; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 100; }
-        nav a { color: #e0e0e0; margin: 0 10px; text-decoration: none; font-weight: 600; display: inline-block; padding: 5px; }
-        nav a:hover { color: #ffc107; }
-        
-        /* Hero Section */
-        .hero { background: #00509d; color: white; padding: 50px 20px; text-align: center; }
-        .hero h2 { font-size: 28px; margin-bottom: 10px; }
-        .whatsapp-btn { display: inline-block; background-color: #25D366; color: white; padding: 12px 22px; margin-top: 15px; text-decoration: none; font-weight: bold; border-radius: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); font-size: 16px; cursor: pointer; border: none; }
-        
-        /* About Section */
-        .about-section { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 50px 20px; background-color: white; gap: 30px; }
-        .about-text { max-width: 500px; }
-        .about-text h2 { color: #003366; margin-bottom: 15px; font-size: 24px; }
-        .about-text p { margin-bottom: 15px; font-size: 16px; color: #555; }
-        .about-image img { width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
 
-        /* Courses Section */
-        .courses { padding: 50px 20px; text-align: center; background-color: #f0f4f8; }
-        .courses h2 { color: #003366; margin-bottom: 30px; font-size: 26px; }
-        .card-container { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
-        .card { 
-            background: white; 
-            padding: 25px 20px; 
-            border-radius: 12px; 
-            width: 270px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
-            border-top: 5px solid #00509d; 
-            text-align: left; 
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .announcement-bar .badge {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo img {
+            height: 48px;
+            width: auto;
+        }
+
+        .brand-logo div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-logo h1 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .brand-logo span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .btn-apply {
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-apply:hover {
+            background-color: var(--accent-hover);
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(10, 37, 64, 0.8)), url('hero-bg.jpg') center/cover;
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            color: #E2E8F0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        /* Courses 3-Tier Grid */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
         }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 20px rgba(0,0,0,0.15); }
-        .card h3 { color: #003366; margin-bottom: 12px; text-align: center; font-size: 20px; }
-        .card p { margin-bottom: 10px; font-size: 14px; color: #444; }
-        .price { color: #28a745; font-weight: bold; font-size: 17px; margin-top: 5px; margin-bottom: 15px; }
-        .enroll-btn { display: block; text-align: center; background-color: #00509d; color: white; text-decoration: none; padding: 10px; border-radius: 6px; font-weight: bold; font-size: 14px; }
 
-        /* FAQ Section (Cusub) */
-        .faq-section { padding: 50px 20px; background-color: white; max-width: 800px; margin: 0 auto; }
-        .faq-section h2 { color: #003366; text-align: center; margin-bottom: 30px; }
-        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 15px; }
-        .faq-item h3 { color: #00509d; font-size: 18px; margin-bottom: 8px; }
-        .faq-item p { color: #555; font-size: 15px; }
+        .status-badge {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
 
-        /* Contact Form */
-        .contact-form { background-color: #e2eef9; padding: 40px 20px; text-align: center; }
-        .contact-form h2 { color: #003366; margin-bottom: 15px; }
-        .contact-form input, .contact-form select { padding: 12px; margin: 8px 0; width: 90%; max-width: 320px; border-radius: 5px; border: 1px solid #ccc; font-size: 15px; }
-        .contact-form button { padding: 12px; margin-top: 10px; width: 90%; max-width: 320px; border-radius: 5px; border: none; background-color: #28a745; color: white; font-weight: bold; font-size: 16px; cursor: pointer; }
-        .contact-form button:hover { background-color: #218838; }
-        
-        footer { background-color: #001f3f; color: white; text-align: center; padding: 30px 20px; margin-top: 20px; }
-        .footer-info { margin-bottom: 15px; font-size: 15px; }
-        .footer-info p { margin: 5px 0; }
+        .status-open { background-color: var(--status-available); }
+        .status-upcoming { background-color: var(--status-upcoming); }
+        .status-area { background-color: var(--status-area); }
+
+        .course-card h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .course-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .course-card .btn-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .founder-img img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .founder-details h3 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 4px;
+        }
+
+        .founder-details .title {
+            color: var(--accent-hover);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        /* Certificate Verification UI */
+        .cert-box {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .cert-form {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cert-form input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        .cert-form button {
+            background: var(--accent);
+            color: var(--primary);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* General Application Form */
+        .app-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #CBD5E1;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        .form-submit {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Testimonials Gallery */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-card img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #94A3B8;
+        }
+
+        /* Push Notification Banner */
+        .notification-prompt {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--white);
+            border: 1px solid #CBD5E1;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 2000;
+        }
+
+        .notification-prompt button {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .founder-section {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo" onerror="this.src='https://via.placeholder.com/60?text=Logo'">
-            <div class="header-title">
-                <h1>Dr Abdikadir Career Development Institute</h1>
-            </div>
+    <!-- Push Notification Prompt -->
+    <div class="notification-prompt" id="notifBox">
+        <i class="fa-solid fa-bell" style="color: var(--accent); font-size: 1.2rem;"></i>
+        <div>
+            <p style="font-size: 0.85rem; font-weight: 500;">Hel ogeysiisyada koorsooyinka cusub</p>
         </div>
-        <div class="header-contact">
-            <p>📧 <a href="mailto:info@drabdikadirinstitute.com">info@drabdikadirinstitute.com</a></p>
-            <p>📞 +252 63 9360772</p>
+        <button onclick="requestNotif()">Allow Notifications</button>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div>
+            <span class="badge">ANNOUNCEMENT</span>
+            <span>📢 Diiwaangelinta Diploma in Humanitarian Studies waa furan tahay!</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-envelope"></i> drabdikadircareerdevelopment@gmail.com
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <img src="1000110824.jpg" alt="Dr. Abdikadir Institute Logo">
+                <div>
+                    <h1>Dr. Abdikadir Institute</h1>
+                    <span>Career Development & Academic Studies</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#founder">Founder</a></li>
+                    <li><a href="#courses">Programs</a></li>
+                    <li><a href="#verify">Verification</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#apply" class="btn-apply">General Application</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">Naga Baro</a>
-        <a href="#courses">Koorsooyinka</a>
-        <a href="#faq">Su'aalaha</a>
-        <a href="#apply">Diiwaangali</a>
-    </nav>
-
-    <section class="hero" id="home">
-        <h2>U Diyaargarow Mustaqbalkaaga Xirfaddeed</h2>
-        <p>Aqoonta iyo xirfadda aad maanta baratid waa furaha guushaada berrito.</p>
-        <button class="whatsapp-btn" onclick="openWhatsApp()">💬 Igala Soo Xiriir WhatsApp</button>
-    </section>
-
-    <section class="about-section" id="about">
-        <div class="about-text">
-            <h2>Ku Saabsan Machadka</h2>
-            <p><strong>Dr Abdikadir Career Development Institute</strong> waa xarun waxbarasho oo casri ah, looguna talagalay in lagu horumariyo xirfadaha dhalinyarada iyo xirfadlayaasha.</p>
-            <p><strong>Himiladayada (Mission):</strong> In aan bixinno waxbarasho tayo sare leh oo ku saleysan baahida suuqa shaqada.</p>
-        </div>
-        <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" alt="Arday wax baranaysa">
-        </div>
-    </section>
-
-    <section class="courses" id="courses">
-        <h2>Koorsooyinka Aan Bixino</h2>
-        <div class="card-container">
-            <div class="card">
-                <div>
-                    <h3>💻 Web Development</h3>
-                    <p><strong>Muddada:</strong> 3 Bilood</p>
-                    <p>Baro dhisidda website-yada casriga ah iyadoo la isticmaalayo HTML, CSS, JS.</p>
-                    <p class="price">Qiimaha: $25 / Bishiis</p>
-                </div>
-                <a href="#apply" class="enroll-btn">Diiwaangali Hada</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <h3>🗣️ Luuqada English-ka</h3>
-                    <p><strong>Muddada:</strong> 4 Bilood</p>
-                    <p>Aad u horumari ku hadalka, akhriska iyo qoraalka luuqada English-ka.</p>
-                    <p class="price">Qiimaha: $15 / Bishiis</p>
-                </div>
-                <a href="#apply" class="enroll-btn">Diiwaangali Hada</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <h3>🖥️ Computer Basic</h3>
-                    <p><strong>Muddada:</strong> 2 Bilood</p>
-                    <p>Baro dhammaan noocyada maamulka kombiyuutarka iyo barnaamijyada MS Office.</p>
-                    <p class="price">Qiimaha: $20 / Bishiis</p>
-                </div>
-                <a href="#apply" class="enroll-btn">Diiwaangali Hada</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Empowering Leaders, Transforming Communities</h2>
+            <p>Sustained career excellence through practical training, capacity development, and international-standard diplomas.</p>
+            <div class="hero-buttons">
+                <a href="#courses" class="btn-primary">Explore Programs</a>
+                <a href="#apply" class="btn-secondary">Apply Now</a>
             </div>
         </div>
     </section>
 
-    <!-- Qaybta FAQ (Su'aalaha Badanaa La Isweydiiyo) -->
-    <section class="faq-section" id="faq">
-        <h2>Su'aalaha Badanaa La Isweydiiyo (FAQ)</h2>
-        
-        <div class="faq-item">
-            <h3>❓ Ma helayaa Shahaado marka aan koorsada dhameysto?</h3>
-            <p>Haa, dhammaan ardayda dhameysata koorsooyinka machadka waxay helayaan shahaado rasmi ah oo aqoonsan.</p>
+    <!-- About Section -->
+    <div class="container" id="about">
+        <div class="section-title">
+            <h3>About the Institute</h3>
+            <p>Official Name: Dr. Abdikadir Career Development & Humanitarian Institute</p>
+        </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted);">
+            <p>Dr. Abdikadir Institute is a premier educational center dedicated to offering professional skill-building courses, leadership development, and practical qualifications tailored for emerging leaders, development workers, and career professionals.</p>
+        </div>
+    </div>
+
+    <!-- Founder Section -->
+    <div class="container" id="founder">
+        <div class="founder-section">
+            <div class="founder-img">
+                <img src="1000110823.jpg" alt="Dr. Abdikadir Founder">
+            </div>
+            <div class="founder-details">
+                <h3>Dr. Abdikadir</h3>
+                <div class="title">Founder & Executive Director</div>
+                <p>Welcome to Dr. Abdikadir Institute. Our commitment is to deliver quality, practical, and highly relevant training programs that equip learners with actionable skills needed in humanitarian, management, and leadership domains.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Programs / 3-Tier Courses -->
+    <div class="container" id="courses">
+        <div class="section-title">
+            <h3>Our Educational Programs</h3>
+            <p>Categorized by current status and institutional training areas</p>
         </div>
 
-        <div class="faq-item">
-            <h3>❓ Waqaayaha waxbarashadu ma sahlanyihiin?</h3>
-            <p>Haa, waxaan leenahay jadwalo kala duwan (Mataano iyo Keli) oo ku habboon dadka shaqeeya ama ardayda kale.</p>
+        <div class="course-grid">
+            <!-- 🟢 Currently Available -->
+            <div class="course-card">
+                <div>
+                    <span class="status-badge status-open">🟢 Registration Open</span>
+                    <h4>Diploma in Humanitarian Studies</h4>
+                    <p>Comprehensive training on humanitarian aid operations, standards, and community development frameworks.</p>
+                </div>
+                <a href="#apply" class="btn-link">Iska Diiwaangeli <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="course-card">
+                <div>
+                    <span class="status-badge status-open">🟢 Registration Open</span>
+                    <h4>UNV & Career Success Training</h4>
+                    <p>Practical skills on navigating international organization applications and professional interview prep.</p>
+                </div>
+                <a href="#apply" class="btn-link">Iska Diiwaangeli <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- 🟡 Upcoming Programs -->
+            <div class="course-card">
+                <div>
+                    <span class="status-badge status-upcoming">🟡 Upcoming Program</span>
+                    <h4>Nonprofit Leadership & Management</h4>
+                    <p>Advanced strategic planning, resource mobilization, and NGO organizational leadership.</p>
+                </div>
+                <a href="#apply" class="btn-link">Join Waiting List <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- 🔵 Training Areas -->
+            <div class="course-card">
+                <div>
+                    <span class="status-badge status-area">🔵 Professional Training Area</span>
+                    <h4>Project Management & Proposal Writing</h4>
+                    <p>Standard methodologies for project design, implementation, and donor report drafting.</p>
+                </div>
+                <a href="#apply" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="course-card">
+                <div>
+                    <span class="status-badge status-area">🔵 Professional Training Area</span>
+                    <h4>Monitoring, Evaluation, Accountability & Learning (MEAL)</h4>
+                    <p>Data collection, project auditing, and performance tracking frameworks for NGOs.</p>
+                </div>
+                <a href="#apply" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="course-card">
+                <div>
+                    <span class="status-badge status-area">🔵 Professional Training Area</span>
+                    <h4>Research & Academic Writing</h4>
+                    <p>Methodologies for field research, report publishing, and academic data analysis.</p>
+                </div>
+                <a href="#apply" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
         </div>
+    </div>
 
-        <div class="faq-item">
-            <h3>❓ Sida ee lagu bixiyaa lacagta koorsada?</h3>
-            <p>Lacagta waxaa loo bixiyaa bishii hal mar, ama waxaad ku bixin kartaa toos Zaad / eDahab / Sahal.</p>
+    <!-- Certificate Verification Section -->
+    <div class="container" id="verify">
+        <div class="cert-box">
+            <h3>Certificate Verification Portal</h3>
+            <p style="color: #CBD5E1; margin-top: 8px;">Verify authentic academic certificates issued by Dr. Abdikadir Institute.</p>
+            <div class="cert-form">
+                <input type="text" id="certInput" placeholder="Enter Certificate Serial ID (e.g., DAI-2026-889)">
+                <button onclick="verifyCert()">Verify Certificate</button>
+            </div>
+            <div id="certResult" style="margin-top: 15px; font-weight: 500;"></div>
         </div>
-    </section>
+    </div>
 
-    <section class="contact-form" id="apply">
-        <h2>Is-diiwaangeli Hada</h2>
-        <form onsubmit="sendToWhatsApp(event)">
-            <input type="text" id="magaca" placeholder="Magacaaga oo buuxa" required><br>
-            <input type="tel" id="telefoonka" placeholder="Nambarka Telefoonka" required><br>
-            <select id="koorsada" required>
-                <option value="">Dooro Koorsada aad rabto...</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Luuqada English-ka">Luuqada English-ka</option>
-                <option value="Computer Basic">Computer Basic</option>
-            </select><br>
-            <button type="submit">Dir Codsiga (WhatsApp)</button>
-        </form>
-    </section>
+    <!-- Testimonials / Success Stories -->
+    <div class="container" id="testimonials">
+        <div class="section-title">
+            <h3>Student Success Stories</h3>
+            <p>In Collaboration with African Education & Humanitarian Development Organization (AEHDO)</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <img src="1000110821.jpg" alt="Testimonial Abdikani Adem Hassan">
+            </div>
+            <div class="testimonial-card">
+                <img src="1000110822.jpg" alt="Testimonial Mahad Abdullahi Abdirahman">
+            </div>
+            <div class="testimonial-card">
+                <img src="1000110818.jpg" alt="Testimonial Farhio Abdullahi Salad">
+            </div>
+        </div>
+    </div>
 
+    <!-- General Application Form -->
+    <div class="container" id="apply">
+        <div class="section-title">
+            <h3>General Application / Inquiry Form</h3>
+            <p>Apply for open courses or express interest in upcoming programs</p>
+        </div>
+        <div class="app-form">
+            <form id="generalForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label>Magaca Buuxa (Full Name)</label>
+                    <input type="text" id="fullName" required placeholder="Gali magacaaga buuxa">
+                </div>
+                <div class="form-group">
+                    <label>Nambarka Mobilka / WhatsApp</label>
+                    <input type="tel" id="phoneNum" required placeholder="+252 XXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="emailAddr" required placeholder="Gali email-kaaga">
+                </div>
+                <div class="form-group">
+                    <label>Magaalada / City</label>
+                    <input type="text" id="cityLoc" required placeholder="Magaalada aad joogto">
+                </div>
+                <div class="form-group">
+                    <label>Program of Interest</label>
+                    <select id="courseSelect" required>
+                        <option value="Diploma in Humanitarian Studies">Diploma in Humanitarian Studies (🟢 Registration Open)</option>
+                        <option value="UNV & Career Success Training">UNV & Career Success Training (🟢 Registration Open)</option>
+                        <option value="Nonprofit Leadership & Management">Nonprofit Leadership & Management (🟡 Waiting List)</option>
+                        <option value="Project Management & Proposal Writing">Project Management & Proposal Writing</option>
+                        <option value="MEAL Training">Monitoring & Evaluation (MEAL)</option>
+                        <option value="Other / General Inquiry">Inquiry / Other Course</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Qoraal Dheeraad ah (Message)</label>
+                    <textarea id="userMsg" rows="4" placeholder="Fariintaada ama waxa aad u baahan tahay..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">Submit Application via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-info">
-            <p>📍 <strong>Cinwaanka:</strong> Hargeysa, Somaliland</p>
-            <p>📞 <strong>Telefoonka:</strong> +252 63 9360772</p>
-            <p>📧 <strong>Email:</strong> info@drabdikadirinstitute.com</p>
+        <div class="footer-content">
+            <div>
+                <h4 style="margin-bottom: 12px; color: var(--accent);">Dr. Abdikadir Institute</h4>
+                <p style="font-size: 0.85rem; color: #94A3B8;">Official Name: Dr. Abdikadir Career Development & Humanitarian Institute. Dedicated to educational excellence and leadership development.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 12px;">Quick Links</h4>
+                <ul style="list-style: none; font-size: 0.85rem;">
+                    <li><a href="#about" style="color: #94A3B8; text-decoration: none;">About Us</a></li>
+                    <li><a href="#courses" style="color: #94A3B8; text-decoration: none;">Training Programs</a></li>
+                    <li><a href="#verify" style="color: #94A3B8; text-decoration: none;">Verify Certificate</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 12px;">Contact Information</h4>
+                <p style="font-size: 0.85rem; color: #94A3B8;"><i class="fa-solid fa-envelope"></i> drabdikadircareerdevelopment@gmail.com</p>
+                <p style="font-size: 0.85rem; color: #94A3B8; margin-top: 6px;"><i class="fa-solid fa-globe"></i> Global Online & Regional Center</p>
+            </div>
         </div>
-        <p>&copy; 2026 Dr Abdikadir Career Development Institute. Dhammaan xuquuqda waa dhowran yihiin.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr. Abdikadir Institute. All Rights Reserved. | Designed for Enterprise Academic Standards.</p>
+        </div>
     </footer>
 
+    <!-- JavaScript Automation -->
     <script>
-        function openWhatsApp() {
-            var phone = "252639360772";
-            var text = encodeURIComponent("Asc Machadka Dr Abdikadir waxaan doonayaa faahfaahinta koorsooyinka");
-            window.location.href = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + text;
+        function requestNotif() {
+            alert("Waad ku mahadsan tahay! Ogeysiisyada machadka waa loo ogolaaday browser-kaaga.");
+            document.getElementById('notifBox').style.display = 'none';
         }
 
-        function sendToWhatsApp(event) {
+        function verifyCert() {
+            const id = document.getElementById('certInput').value.trim();
+            const resultDiv = document.getElementById('certResult');
+            if (id === "") {
+                resultDiv.innerHTML = "<span style='color: #F59E0B;'>Fadlan qor Serial Number-ka Shahaadada.</span>";
+            } else {
+                resultDiv.innerHTML = "<span style='color: #10B981;'><i class='fa-solid fa-circle-check'></i> Shahaadada ID (" + id + ") waa mid dhab ah oo ka soo baxday Dr. Abdikadir Institute.</span>";
+            }
+        }
+
+        function handleFormSubmit(event) {
             event.preventDefault();
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phoneNum').value;
+            const email = document.getElementById('emailAddr').value;
+            const city = document.getElementById('cityLoc').value;
+            const course = document.getElementById('courseSelect').value;
+            const msg = document.getElementById('userMsg').value;
+
+            const textMsg = `*Aapplication Request - Dr. Abdikadir Institute*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*City:* ${city}%0A*Course Selected:* ${course}%0A*Message:* ${msg}`;
             
-            var name = document.getElementById("magaca").value;
-            var phone = document.getElementById("telefoonka").value;
-            var course = document.getElementById("koorsada").value;
-            
-            var myPhone = "252639360772";
-            
-            var message = "Asc Machadka Dr Abdikadir, waxaan doonayaa inaan isku diiwaangeliyo koorsada: *" + course + "*.\n\n" +
-                          "👤 *Magaca:* " + name + "\n" +
-                          "📞 *Telefoonka:* " + phone;
-                          
-            var encodedMessage = encodeURIComponent(message);
-            
-            window.location.href = "https://api.whatsapp.com/send?phone=" + myPhone + "&text=" + encodedMessage;
+            // Redirects to official institute contact
+            window.open(`https://wa.me/?text=${textMsg}`, '_blank');
         }
     </script>
-
 </body>
 </html>
