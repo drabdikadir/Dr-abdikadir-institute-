@@ -1,10 +1,13 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="DACDI – Dr Abdikadir Career Development Institute. Professional education, career development and practical skills training.">
+<meta name="description" content="DACDI – Dr Abdikadir Career Development Institute. Professional education, career development, humanitarian and practical skills training.">
+
+<meta name="keywords" content="DACDI, Dr Abdikadir Career Development Institute, training, career development, NGO management, humanitarian training, leadership">
 
 <title>DACDI | Dr Abdikadir Career Development Institute</title>
 
@@ -19,6 +22,7 @@
     --dark:#172235;
     --text:#445166;
     --border:#e4e9f0;
+    --green:#25D366;
     --shadow:0 12px 35px rgba(8,43,89,.10);
 }
 
@@ -36,7 +40,7 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     color:var(--dark);
     line-height:1.7;
-    background:#fff;
+    background:white;
 }
 
 a{
@@ -54,7 +58,10 @@ img{
     margin:auto;
 }
 
-/* TOP BAR */
+
+/* =========================
+   TOP BAR
+========================= */
 
 .topbar{
     background:var(--navy);
@@ -75,7 +82,10 @@ img{
     color:white;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:sticky;
@@ -118,7 +128,7 @@ header{
     font-size:10px;
     color:#687487;
     line-height:1.3;
-    max-width:230px;
+    max-width:240px;
 }
 
 .nav-links{
@@ -140,7 +150,7 @@ header{
 .nav-apply{
     background:var(--navy);
     color:white !important;
-    padding:11px 17px;
+    padding:10px 16px;
     border-radius:8px;
 }
 
@@ -156,7 +166,10 @@ header{
     cursor:pointer;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     background:
@@ -255,7 +268,10 @@ header{
     border-radius:17px;
 }
 
-/* GENERAL */
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section{
     padding:82px 0;
@@ -281,7 +297,10 @@ section{
     background:var(--light);
 }
 
-/* ABOUT */
+
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid{
     display:grid;
@@ -337,7 +356,10 @@ section{
     color:var(--text);
 }
 
-/* FOUNDER */
+
+/* =========================
+   FOUNDER
+========================= */
 
 .founder-grid{
     display:grid;
@@ -377,7 +399,10 @@ section{
     margin-bottom:15px;
 }
 
-/* PROGRAMS */
+
+/* =========================
+   PROGRAMS
+========================= */
 
 .programs-grid{
     display:grid;
@@ -422,7 +447,10 @@ section{
     font-size:14px;
 }
 
-/* APPLICATION */
+
+/* =========================
+   REGISTRATION
+========================= */
 
 .apply-grid{
     display:grid;
@@ -444,12 +472,20 @@ section{
 }
 
 .apply-info p{
-    margin-bottom:9px;
+    margin-bottom:12px;
     color:#e4edf9;
 }
 
-.apply-info a{
-    text-decoration:underline;
+.apply-info strong{
+    color:white;
+}
+
+.registration-note{
+    margin-top:22px;
+    padding:15px;
+    background:rgba(255,255,255,.10);
+    border-radius:10px;
+    font-size:13px;
 }
 
 form{
@@ -500,11 +536,19 @@ textarea:focus{
 }
 
 textarea{
-    min-height:130px;
+    min-height:120px;
     resize:vertical;
 }
 
-/* CONTACT */
+.form-submit{
+    width:100%;
+    font-size:15px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact-grid{
     display:grid;
@@ -540,7 +584,10 @@ textarea{
     font-weight:700;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#061f40;
@@ -576,7 +623,10 @@ footer a:hover{
     font-size:13px;
 }
 
-/* WHATSAPP FLOATING BUTTON */
+
+/* =========================
+   WHATSAPP
+========================= */
 
 .whatsapp{
     position:fixed;
@@ -585,7 +635,7 @@ footer a:hover{
     width:60px;
     height:60px;
     border-radius:50%;
-    background:#25D366;
+    background:var(--green);
     color:white;
     display:grid;
     place-items:center;
@@ -595,7 +645,10 @@ footer a:hover{
     z-index:1500;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:950px){
 
@@ -639,6 +692,7 @@ footer a:hover{
         grid-template-columns:1fr 1fr;
     }
 }
+
 
 @media(max-width:600px){
 
@@ -713,16 +767,24 @@ footer a:hover{
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- TOP BAR -->
+
+<!-- =========================
+     TOP BAR
+========================= -->
 
 <div class="topbar">
+
     <div class="container topbar-content">
 
-        <span>Professional Education • Career Development • Skills Training</span>
+        <span>
+            Professional Education • Career Development • Skills Training
+        </span>
 
         <span>
             📧
@@ -732,10 +794,14 @@ footer a:hover{
         </span>
 
     </div>
+
 </div>
 
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -743,15 +809,20 @@ footer a:hover{
 
         <a href="#home" class="brand">
 
-            <!-- Logo-ga cusub oo magaciisu sax yahay -->
-            <img src="1000110824.jpg" alt="DACDI Logo">
+            <img
+                src="1000110824.jpg"
+                alt="DACDI Logo">
 
             <div>
-                <div class="brand-name">DACDI</div>
+
+                <div class="brand-name">
+                    DACDI
+                </div>
 
                 <span class="brand-full">
                     Dr Abdikadir Career Development Institute
                 </span>
+
             </div>
 
         </a>
@@ -760,17 +831,29 @@ footer a:hover{
         <nav class="nav-links" id="navLinks">
 
             <a href="#home">Home</a>
+
             <a href="#about">About</a>
+
             <a href="#founder">Founder</a>
+
             <a href="#programs">Programs</a>
-            <a href="#apply">Apply</a>
+
+            <a href="#register" class="nav-apply">
+                Register
+            </a>
+
             <a href="#contact">Contact</a>
 
         </nav>
 
 
-        <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open Menu">
+
             ☰
+
         </button>
 
     </div>
@@ -778,9 +861,13 @@ footer a:hover{
 </header>
 
 
+
 <main>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -792,44 +879,61 @@ footer a:hover{
                 DACDI • Learning • Skills • Opportunity
             </div>
 
+
             <h1>
+
                 Building Skills.
                 <span>Creating Opportunities.</span>
+
             </h1>
 
+
             <p class="hero-text">
+
                 Dr Abdikadir Career Development Institute provides
                 practical learning, professional development and
                 skills-based training opportunities for learners
                 and professionals.
+
             </p>
+
 
             <div class="hero-actions">
 
-                <a href="#apply" class="btn btn-primary">
-                    Apply for Training
+                <a
+                    href="#register"
+                    class="btn btn-primary">
+
+                    Register Your Interest
+
                 </a>
+
 
                 <a
                     href="https://wa.me/252639360772?text=Hello%20DACDI%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20training%20programs."
                     target="_blank"
                     class="btn btn-gold">
-                    Chat on WhatsApp (+252 63 9360772)
+
+                    Chat on WhatsApp
+
                 </a>
 
             </div>
 
+
             <p class="hero-note">
+
                 Training programs and schedules are announced
-                when opportunities become available.
+                as opportunities become available.
+
             </p>
 
         </div>
 
 
+
         <div class="hero-image-card">
 
-            <!-- Sawirka Founder-ka oo magaciisu sax yahay -->
             <img
                 src="1000110825.jpg"
                 alt="Founder and Director of DACDI">
@@ -841,7 +945,10 @@ footer a:hover{
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about" class="light-section">
 
@@ -849,41 +956,57 @@ footer a:hover{
 
         <div class="section-head">
 
-            <h2>About DACDI</h2>
+            <h2>
+                About DACDI
+            </h2>
 
             <p>
+
                 DACDI is a growing career development institute
                 focused on practical education, professional skills
                 and opportunities for learners.
+
             </p>
 
         </div>
 
 
+
         <div class="about-grid">
+
 
             <div class="info-card">
 
-                <h3>Our Mission</h3>
+                <h3>
+                    Our Mission
+                </h3>
 
                 <p>
-                    To provide accessible, practical and career-focused
-                    learning opportunities that help learners strengthen
-                    their knowledge, skills and professional confidence.
+
+                    To provide accessible, practical and
+                    career-focused learning opportunities that help
+                    learners strengthen their knowledge, skills and
+                    professional confidence.
+
                 </p>
 
             </div>
 
 
+
             <div class="info-card">
 
-                <h3>Our Vision</h3>
+                <h3>
+                    Our Vision
+                </h3>
 
                 <p>
+
                     To grow into a respected professional learning
                     institution connecting learners with relevant
                     knowledge, skills and opportunities in Somalia
                     and beyond.
+
                 </p>
 
             </div>
@@ -891,31 +1014,80 @@ footer a:hover{
         </div>
 
 
+
         <div class="values">
 
-            <div class="value-card">
-                <div class="icon">🎓</div>
-                <h4>Learning</h4>
-                <p>Continuous learning and knowledge development.</p>
-            </div>
 
             <div class="value-card">
-                <div class="icon">💡</div>
-                <h4>Innovation</h4>
-                <p>Encouraging practical ideas and new solutions.</p>
+
+                <div class="icon">
+                    🎓
+                </div>
+
+                <h4>
+                    Learning
+                </h4>
+
+                <p>
+                    Continuous learning and knowledge development.
+                </p>
+
             </div>
 
-            <div class="value-card">
-                <div class="icon">🤝</div>
-                <h4>Professionalism</h4>
-                <p>Promoting responsibility and professional standards.</p>
-            </div>
+
 
             <div class="value-card">
-                <div class="icon">🌍</div>
-                <h4>Opportunity</h4>
-                <p>Connecting learners with relevant opportunities.</p>
+
+                <div class="icon">
+                    💡
+                </div>
+
+                <h4>
+                    Innovation
+                </h4>
+
+                <p>
+                    Encouraging practical ideas and new solutions.
+                </p>
+
             </div>
+
+
+
+            <div class="value-card">
+
+                <div class="icon">
+                    🤝
+                </div>
+
+                <h4>
+                    Professionalism
+                </h4>
+
+                <p>
+                    Promoting responsibility and professional standards.
+                </p>
+
+            </div>
+
+
+
+            <div class="value-card">
+
+                <div class="icon">
+                    🌍
+                </div>
+
+                <h4>
+                    Opportunity
+                </h4>
+
+                <p>
+                    Connecting learners with relevant opportunities.
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -924,11 +1096,15 @@ footer a:hover{
 </section>
 
 
-<!-- FOUNDER -->
+
+<!-- =========================
+     FOUNDER
+========================= -->
 
 <section id="founder">
 
     <div class="container founder-grid">
+
 
         <img
             src="1000110825.jpg"
@@ -942,20 +1118,37 @@ footer a:hover{
                 Founder & Director
             </span>
 
+
             <h2>
-                Dr Abdikadir Career Development Institute
+                Dr Abdikadir Said Jama
             </h2>
 
-            <p>
-                DACDI was established with a focus on career
-                development, practical learning and professional
-                skills development.
-            </p>
 
             <p>
+
+                Dr Abdikadir Career Development Institute was
+                established with a focus on career development,
+                practical learning and professional skills
+                development.
+
+            </p>
+
+
+            <p>
+
                 The institute continues to develop learning
                 opportunities that respond to emerging needs,
                 professional growth and access to opportunities.
+
+            </p>
+
+
+            <p>
+
+                DACDI aims to support learners and professionals
+                through relevant training, knowledge development
+                and practical skills.
+
             </p>
 
         </div>
@@ -965,62 +1158,207 @@ footer a:hover{
 </section>
 
 
-<!-- PROGRAMS -->
+
+<!-- =========================
+     PROGRAMS
+========================= -->
 
 <section id="programs" class="light-section">
 
     <div class="container">
 
+
         <div class="section-head">
 
-            <h2>Programs & Training Areas</h2>
+            <h2>
+                Programs & Training Areas
+            </h2>
 
             <p>
-                DACDI provides training opportunities according to
-                program availability, learner needs and emerging
-                opportunities.
+
+                DACDI provides learning opportunities according
+                to program availability, learner needs and
+                emerging opportunities.
+
             </p>
 
         </div>
 
 
+
         <div class="programs-grid">
 
-            <div class="program-card">
-                <span class="status">Training Area</span>
-                <h3>NGO Management & Project Cycle Management</h3>
-                <p>Professional skills for NGO operations and project work.</p>
-            </div>
 
             <div class="program-card">
-                <span class="status">Training Area</span>
-                <h3>Humanitarian Crisis Management</h3>
-                <p>Practical learning related to humanitarian response and crisis management.</p>
+
+                <span class="status">
+                    Training Area
+                </span>
+
+                <h3>
+                    NGO Management & Project Cycle Management
+                </h3>
+
+                <p>
+                    Professional skills for NGO operations,
+                    project planning and project management.
+                </p>
+
             </div>
 
-            <div class="program-card">
-                <span class="status">Training Area</span>
-                <h3>Humanitarian Report Writing</h3>
-                <p>Writing skills for humanitarian and development reporting.</p>
-            </div>
+
 
             <div class="program-card">
-                <span class="status">Training Area</span>
-                <h3>UN Volunteers (UNV) Success Training</h3>
-                <p>Preparation and guidance related to UNV opportunities and applications.</p>
+
+                <span class="status">
+                    Training Area
+                </span>
+
+                <h3>
+                    Humanitarian Crisis Management
+                </h3>
+
+                <p>
+                    Practical learning related to humanitarian
+                    response and crisis management.
+                </p>
+
             </div>
 
-            <div class="program-card">
-                <span class="status">Training Area</span>
-                <h3>International Conferences & Scholarships</h3>
-                <p>Guidance for international conference and scholarship opportunities.</p>
-            </div>
+
 
             <div class="program-card">
-                <span class="status">Training Area</span>
-                <h3>Leadership & Capacity Building</h3>
-                <p>Developing strategic leadership and institutional growth skills.</p>
+
+                <span class="status">
+                    Training Area
+                </span>
+
+                <h3>
+                    Humanitarian Report Writing
+                </h3>
+
+                <p>
+                    Writing skills for humanitarian and
+                    development reporting.
+                </p>
+
             </div>
+
+
+
+            <div class="program-card">
+
+                <span class="status">
+                    Training Area
+                </span>
+
+                <h3>
+                    UN Volunteers (UNV) Success Training
+                </h3>
+
+                <p>
+                    Preparation and guidance related to UNV
+                    opportunities, applications and profiles.
+                </p>
+
+            </div>
+
+
+
+            <div class="program-card">
+
+                <span class="status">
+                    Training Area
+                </span>
+
+                <h3>
+                    International Conferences & Scholarships
+                </h3>
+
+                <p>
+                    Guidance for international conference,
+                    scholarship and professional opportunities.
+                </p>
+
+            </div>
+
+
+
+            <div class="program-card">
+
+                <span class="status">
+                    Training Area
+                </span>
+
+                <h3>
+                    Leadership & Capacity Building
+                </h3>
+
+                <p>
+                    Developing leadership, communication and
+                    institutional capacity skills.
+                </p>
+
+            </div>
+
+
+
+            <div class="program-card">
+
+                <span class="status">
+                    Diploma Program
+                </span>
+
+                <h3>
+                    Diploma in Humanitarian & NGO Management
+                </h3>
+
+                <p>
+                    A developing professional program focused on
+                    humanitarian work, NGO management and related
+                    practical skills.
+                </p>
+
+            </div>
+
+
+
+            <div class="program-card">
+
+                <span class="status">
+                    Training Area
+                </span>
+
+                <h3>
+                    Professional Development
+                </h3>
+
+                <p>
+                    Practical learning designed to strengthen
+                    workplace and career development skills.
+                </p>
+
+            </div>
+
+
+
+            <div class="program-card">
+
+                <span class="status">
+                    Training Area
+                </span>
+
+                <h3>
+                    Career Development
+                </h3>
+
+                <p>
+                    Supporting learners with knowledge and skills
+                    for professional growth and opportunities.
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -1029,62 +1367,208 @@ footer a:hover{
 </section>
 
 
-<!-- APPLY -->
 
-<section id="apply">
+<!-- =========================
+     REGISTRATION
+========================= -->
+
+<section id="register">
 
     <div class="container apply-grid">
 
+
         <div class="apply-info">
 
-            <h3>Apply for Training</h3>
+            <h3>
+                Register Your Interest
+            </h3>
+
 
             <p>
-                Fill out the form to register your interest in our upcoming career development programs.
+
+                Interested in learning with DACDI?
+
+                Complete the registration form and our team
+                will contact you through WhatsApp.
+
             </p>
 
-            <p>
-                <strong>WhatsApp:</strong> +252 63 9360772
-            </p>
 
             <p>
-                <strong>Email:</strong> drabdikadircareerddevelopment@gmail.com
+                <strong>WhatsApp:</strong>
+                +252 63 9360772
             </p>
+
+
+            <p>
+                <strong>Email:</strong>
+                drabdikadircareerddevelopment@gmail.com
+            </p>
+
+
+            <div class="registration-note">
+
+                Training dates and schedules may vary depending
+                on program availability and upcoming opportunities.
+
+            </div>
 
         </div>
 
 
-        <form action="https://wa.me/252639360772" method="get" target="_blank">
+
+        <form id="registrationForm">
+
 
             <div class="form-grid">
 
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" placeholder="Enter your full name" required>
-                </div>
 
                 <div class="form-group">
-                    <label>Phone / WhatsApp</label>
-                    <input type="tel" placeholder="+252..." required>
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required>
+
                 </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone / WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+252..."
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="your@email.com">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="country">
+                        Country
+                    </label>
+
+                    <input
+                        type="text"
+                        id="country"
+                        placeholder="Enter your country">
+
+                </div>
+
+
 
                 <div class="form-group full">
-                    <label>Select Program</label>
-                    <select required>
-                        <option value="">Select a program...</option>
-                        <option>NGO Management & Project Cycle Management</option>
-                        <option>Humanitarian Crisis Management</option>
-                        <option>Humanitarian Report Writing</option>
-                        <option>UN Volunteers (UNV) Success Training</option>
-                        <option>International Conferences & Scholarships</option>
+
+                    <label for="interest">
+                        Area of Interest
+                    </label>
+
+                    <select id="interest" required>
+
+                        <option value="">
+                            Select an area of interest...
+                        </option>
+
+                        <option>
+                            NGO Management & Project Cycle Management
+                        </option>
+
+                        <option>
+                            Humanitarian Crisis Management
+                        </option>
+
+                        <option>
+                            Humanitarian Report Writing
+                        </option>
+
+                        <option>
+                            UN Volunteers (UNV) Success Training
+                        </option>
+
+                        <option>
+                            International Conferences & Scholarships
+                        </option>
+
+                        <option>
+                            Leadership & Capacity Building
+                        </option>
+
+                        <option>
+                            Diploma in Humanitarian & NGO Management
+                        </option>
+
+                        <option>
+                            Professional Development
+                        </option>
+
+                        <option>
+                            Career Development
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
                     </select>
+
                 </div>
 
+
+
                 <div class="form-group full">
-                    <button type="submit" class="btn btn-primary">
-                        Submit Application via WhatsApp
-                    </button>
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us what you would like to learn or ask about..."></textarea>
+
                 </div>
+
+
+
+                <div class="form-group full">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary form-submit">
+
+                        Submit Registration via WhatsApp
+
+                    </button>
+
+                </div>
+
 
             </div>
 
@@ -1095,40 +1579,100 @@ footer a:hover{
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact" class="light-section">
 
     <div class="container">
 
+
         <div class="section-head">
 
-            <h2>Contact Us</h2>
+            <h2>
+                Contact Us
+            </h2>
 
-            <p>Get in touch with Dr Abdikadir Career Development Institute.</p>
+            <p>
+                Get in touch with Dr Abdikadir Career Development Institute.
+            </p>
 
         </div>
 
 
+
         <div class="contact-grid">
 
-            <div class="contact-card">
-                <div class="icon">📱</div>
-                <h3>WhatsApp / Phone</h3>
-                <p><a href="https://wa.me/252639360772" target="_blank">+252 63 9360772</a></p>
-            </div>
 
             <div class="contact-card">
-                <div class="icon">📧</div>
-                <h3>Email</h3>
-                <p><a href="mailto:drabdikadircareerddevelopment@gmail.com">drabdikadircareerddevelopment@gmail.com</a></p>
+
+                <div class="icon">
+                    📱
+                </div>
+
+                <h3>
+                    WhatsApp / Phone
+                </h3>
+
+                <p>
+
+                    <a
+                        href="https://wa.me/252639360772"
+                        target="_blank">
+
+                        +252 63 9360772
+
+                    </a>
+
+                </p>
+
             </div>
 
+
+
             <div class="contact-card">
-                <div class="icon">📍</div>
-                <h3>Location</h3>
-                <p>Somalia</p>
+
+                <div class="icon">
+                    📧
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+
+                    <a
+                        href="mailto:drabdikadircareerddevelopment@gmail.com">
+
+                        drabdikadircareerddevelopment@gmail.com
+
+                    </a>
+
+                </p>
+
             </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Somalia
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -1136,65 +1680,217 @@ footer a:hover{
 
 </section>
 
+
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
     <div class="container footer-grid">
 
-        <div>
-            <h3>DACDI</h3>
-            <p>Dr Abdikadir Career Development Institute</p>
-            <p>Building skills and creating career opportunities.</p>
-        </div>
 
         <div>
-            <h3>Quick Links</h3>
-            <p><a href="#home">Home</a></p>
-            <p><a href="#about">About</a></p>
-            <p><a href="#programs">Programs</a></p>
-            <p><a href="#apply">Apply</a></p>
+
+            <h3>
+                DACDI
+            </h3>
+
+            <p>
+                Dr Abdikadir Career Development Institute
+            </p>
+
+            <p>
+                Building skills and creating career opportunities.
+            </p>
+
         </div>
 
+
+
         <div>
-            <h3>Direct Contact</h3>
-            <p>WhatsApp: +252 63 9360772</p>
-            <p>Email: drabdikadircareerddevelopment@gmail.com</p>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="#home">
+                    Home
+                </a>
+            </p>
+
+            <p>
+                <a href="#about">
+                    About
+                </a>
+            </p>
+
+            <p>
+                <a href="#programs">
+                    Programs
+                </a>
+            </p>
+
+            <p>
+                <a href="#register">
+                    Register
+                </a>
+            </p>
+
         </div>
+
+
+
+        <div>
+
+            <h3>
+                Direct Contact
+            </h3>
+
+            <p>
+                WhatsApp: +252 63 9360772
+            </p>
+
+            <p>
+                Email:
+                drabdikadircareerddevelopment@gmail.com
+            </p>
+
+        </div>
+
 
     </div>
 
+
+
     <div class="copyright">
-        © DACDI - Dr Abdikadir Career Development Institute. All rights reserved.
+
+        © 2026 DACDI - Dr Abdikadir Career Development Institute.
+        All rights reserved.
+
     </div>
 
 </footer>
 
 
-<!-- FLOATING WHATSAPP BUTTON -->
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
 
 <a
-    href="https://wa.me/252639360772?text=Hello%20DACDI%2C%20I%20would%20like%20to%20apply%20for%20a%20course."
+    href="https://wa.me/252639360772?text=Hello%20DACDI%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20training%20programs."
     class="whatsapp"
     target="_blank"
     title="Chat on WhatsApp">
+
     💬
+
 </a>
 
 
-<script>
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
 
-    if(menuBtn) {
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* MOBILE MENU */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function(){
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+const navItems = document.querySelectorAll(".nav-links a");
+
+navItems.forEach(function(item){
+
+    item.addEventListener("click", function(){
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+/* REGISTRATION TO WHATSAPP */
+
+const registrationForm =
+document.getElementById("registrationForm");
+
+
+registrationForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById("fullName").value.trim();
+
+    const phone =
+    document.getElementById("phone").value.trim();
+
+    const email =
+    document.getElementById("email").value.trim();
+
+    const country =
+    document.getElementById("country").value.trim();
+
+    const interest =
+    document.getElementById("interest").value;
+
+    const message =
+    document.getElementById("message").value.trim();
+
+
+    const whatsappMessage =
+
+`Hello DACDI,
+
+I would like to register my interest in your training programs.
+
+Full Name: ${name}
+
+Phone / WhatsApp: ${phone}
+
+Email: ${email || "Not provided"}
+
+Country: ${country || "Not provided"}
+
+Area of Interest: ${interest}
+
+Message: ${message || "No additional message."}
+
+Thank you.`;
+
+
+    const whatsappURL =
+    "https://wa.me/252639360772?text=" +
+    encodeURIComponent(whatsappMessage);
+
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+
 </script>
+
 
 </body>
 </html>
