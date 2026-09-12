@@ -1,730 +1,1200 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Abdikadir Institute | Professional Training & Career Development</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary: #0A2540;
-            --accent: #D4AF37;
-            --accent-hover: #b89528;
-            --bg-light: #F8FAFC;
-            --text-dark: #1E293B;
-            --text-muted: #64748B;
-            --white: #FFFFFF;
-            --status-available: #10B981;
-            --status-upcoming: #F59E0B;
-            --status-area: #3B82F6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
+<meta name="description" content="DACDI – Dr Abdikadir Career Development Institute. Professional education, career development and practical skills training.">
 
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+<title>DACDI | Dr Abdikadir Career Development Institute</title>
 
-        /* Announcement Bar */
-        .announcement-bar {
-            background: var(--primary);
-            color: var(--white);
-            padding: 8px 16px;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
+<style>
 
-        .announcement-bar .badge {
-            background: var(--accent);
-            color: var(--primary);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 700;
-            margin-right: 8px;
-        }
+:root{
+    --navy:#082b59;
+    --blue:#1268c4;
+    --gold:#c99a2e;
+    --light:#f5f8fc;
+    --white:#ffffff;
+    --dark:#172235;
+    --text:#445166;
+    --border:#e4e9f0;
+    --shadow:0 12px 35px rgba(8,43,89,.10);
+}
 
-        /* Header / Navbar */
-        header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 20px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--dark);
+    line-height:1.7;
+    background:#fff;
+}
 
-        .brand-logo img {
-            height: 48px;
-            width: auto;
-        }
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-        .brand-logo div {
-            display: flex;
-            flex-direction: column;
-        }
+img{
+    max-width:100%;
+    display:block;
+}
 
-        .brand-logo h1 {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
+.container{
+    width:min(1150px,92%);
+    margin:auto;
+}
 
-        .brand-logo span {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+/* TOP BAR */
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            align-items: center;
-        }
+.topbar{
+    background:var(--navy);
+    color:white;
+    font-size:13px;
+    padding:8px 0;
+}
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
+.topbar-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
 
-        nav a:hover {
-            color: var(--accent);
-        }
+.topbar a{
+    color:white;
+}
 
-        .btn-apply {
-            background-color: var(--accent);
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
+/* HEADER */
 
-        .btn-apply:hover {
-            background-color: var(--accent-hover);
-            color: var(--primary);
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(10px);
+}
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(10, 37, 64, 0.8)), url('hero-bg.jpg') center/cover;
-            color: var(--white);
-            padding: 80px 20px;
-            text-align: center;
-        }
+.navbar{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
+.brand img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+}
 
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 24px;
-            color: #E2E8F0;
-        }
+.brand-name{
+    font-size:23px;
+    font-weight:800;
+    color:var(--navy);
+    letter-spacing:.5px;
+}
 
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-        }
+.brand-full{
+    display:block;
+    font-size:10px;
+    color:#687487;
+    line-height:1.3;
+    max-width:230px;
+}
 
-        .btn-primary {
-            background: var(--accent);
-            color: var(--primary);
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-        }
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
 
-        .btn-secondary {
-            border: 2px solid var(--white);
-            color: var(--white);
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-        }
+.nav-links a{
+    font-size:14px;
+    font-weight:700;
+    color:#26364a;
+}
 
-        /* Layout Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+.nav-links a:hover{
+    color:var(--blue);
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+.nav-apply{
+    background:var(--navy);
+    color:white !important;
+    padding:11px 17px;
+    border-radius:8px;
+}
 
-        .section-title h3 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
+.menu-btn{
+    display:none;
+    border:0;
+    background:var(--navy);
+    color:white;
+    font-size:22px;
+    width:43px;
+    height:43px;
+    border-radius:8px;
+    cursor:pointer;
+}
 
-        .section-title p {
-            color: var(--text-muted);
-        }
+/* HERO */
 
-        /* Courses 3-Tier Grid */
-        .course-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
+.hero{
+    background:
+    linear-gradient(135deg,#edf5ff 0%,#ffffff 55%,#fff8e8 100%);
+    padding:90px 0;
+}
 
-        .course-card {
-            background: var(--white);
-            border-radius: 8px;
-            border: 1px solid #E2E8F0;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
 
-        .status-badge {
-            align-self: flex-start;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 20px;
-            color: var(--white);
-            margin-bottom: 12px;
-        }
+.eyebrow{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
 
-        .status-open { background-color: var(--status-available); }
-        .status-upcoming { background-color: var(--status-upcoming); }
-        .status-area { background-color: var(--status-area); }
+.hero h1{
+    font-size:clamp(40px,5vw,65px);
+    line-height:1.08;
+    color:var(--navy);
+    margin-bottom:22px;
+}
 
-        .course-card h4 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
+.hero h1 span{
+    color:var(--blue);
+}
 
-        .course-card p {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
+.hero-text{
+    font-size:18px;
+    color:var(--text);
+    max-width:680px;
+}
 
-        .course-card .btn-link {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.875rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
+.hero-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
 
-        /* Founder Section */
-        .founder-section {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 40px;
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 40px;
-            align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
+.btn{
+    display:inline-block;
+    padding:13px 21px;
+    border-radius:9px;
+    font-weight:800;
+    border:none;
+    cursor:pointer;
+    transition:.2s;
+}
 
-        .founder-img img {
-            width: 100%;
-            border-radius: 8px;
-            object-fit: cover;
-        }
+.btn:hover{
+    transform:translateY(-2px);
+}
 
-        .founder-details h3 {
-            color: var(--primary);
-            font-size: 1.6rem;
-            margin-bottom: 4px;
-        }
+.btn-primary{
+    background:var(--navy);
+    color:white;
+}
 
-        .founder-details .title {
-            color: var(--accent-hover);
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
+.btn-gold{
+    background:var(--gold);
+    color:white;
+}
 
-        /* Certificate Verification UI */
-        .cert-box {
-            background: var(--primary);
-            color: var(--white);
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-        }
+.btn-outline{
+    border:1px solid var(--navy);
+    color:var(--navy);
+    background:white;
+}
 
-        .cert-form {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 20px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.hero-note{
+    margin-top:17px;
+    color:#6b7687;
+    font-size:13px;
+}
 
-        .cert-form input {
-            flex: 1;
-            padding: 12px;
-            border-radius: 6px;
-            border: none;
-            outline: none;
-        }
+.hero-image-card{
+    background:white;
+    padding:15px;
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
 
-        .cert-form button {
-            background: var(--accent);
-            color: var(--primary);
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-        }
+.hero-image-card img{
+    width:100%;
+    height:470px;
+    object-fit:cover;
+    border-radius:17px;
+}
 
-        /* General Application Form */
-        .app-form {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            max-width: 700px;
-            margin: 0 auto;
-        }
+/* GENERAL */
 
-        .form-group {
-            margin-bottom: 16px;
-        }
+section{
+    padding:82px 0;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
+.section-head{
+    max-width:780px;
+    margin:0 auto 45px;
+    text-align:center;
+}
 
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #CBD5E1;
-            border-radius: 6px;
-            outline: none;
-        }
+.section-head h2{
+    color:var(--navy);
+    font-size:37px;
+    margin-bottom:10px;
+}
 
-        .form-submit {
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            width: 100%;
-            padding: 12px;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-        }
+.section-head p{
+    color:var(--text);
+}
 
-        /* Testimonials Gallery */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+.light-section{
+    background:var(--light);
+}
 
-        .testimonial-card img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
+/* ABOUT */
 
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            padding: 40px 20px 20px;
-            margin-top: 60px;
-        }
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
+.info-card{
+    background:white;
+    border:1px solid var(--border);
+    padding:30px;
+    border-radius:17px;
+    box-shadow:0 7px 22px rgba(8,43,89,.05);
+}
 
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            font-size: 0.85rem;
-            color: #94A3B8;
-        }
+.info-card h3{
+    color:var(--navy);
+    margin-bottom:10px;
+    font-size:22px;
+}
 
-        /* Push Notification Banner */
-        .notification-prompt {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--white);
-            border: 1px solid #CBD5E1;
-            padding: 16px;
-            border-radius: 8px;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            z-index: 2000;
-        }
+.info-card p{
+    color:var(--text);
+}
 
-        .notification-prompt button {
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            padding: 6px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+.values{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
 
-        @media (max-width: 768px) {
-            .founder-section {
-                grid-template-columns: 1fr;
-            }
-            nav ul {
-                display: none;
-            }
-        }
-    </style>
+.value-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:23px;
+    text-align:center;
+}
+
+.value-card .icon{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.value-card h4{
+    color:var(--navy);
+    margin-bottom:6px;
+}
+
+.value-card p{
+    font-size:13px;
+    color:var(--text);
+}
+
+/* FOUNDER */
+
+.founder-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:55px;
+    align-items:center;
+}
+
+.founder-photo{
+    width:100%;
+    max-height:600px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.label{
+    display:inline-block;
+    background:#edf5ff;
+    color:var(--navy);
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:13px;
+}
+
+.founder-content h2{
+    font-size:40px;
+    color:var(--navy);
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.founder-content p{
+    color:var(--text);
+    margin-bottom:15px;
+}
+
+/* PROGRAMS */
+
+.programs-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.program-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px;
+    box-shadow:0 7px 22px rgba(8,43,89,.05);
+    transition:.2s;
+}
+
+.program-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+}
+
+.status{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800;
+    background:#edf5ff;
+    color:var(--navy);
+    margin-bottom:13px;
+}
+
+.program-card h3{
+    color:var(--navy);
+    font-size:18px;
+    line-height:1.4;
+    margin-bottom:8px;
+}
+
+.program-card p{
+    color:var(--text);
+    font-size:14px;
+}
+
+/* APPLICATION */
+
+.apply-grid{
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    gap:35px;
+    align-items:start;
+}
+
+.apply-info{
+    background:var(--navy);
+    color:white;
+    border-radius:18px;
+    padding:32px;
+}
+
+.apply-info h3{
+    font-size:25px;
+    margin-bottom:13px;
+}
+
+.apply-info p{
+    margin-bottom:9px;
+    color:#e4edf9;
+}
+
+.apply-info a{
+    text-decoration:underline;
+}
+
+form{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:17px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    color:var(--navy);
+    font-size:14px;
+    font-weight:800;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    margin-top:6px;
+    padding:13px;
+    border:1px solid #d7dee8;
+    border-radius:9px;
+    font:inherit;
+    outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:var(--blue);
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:27px;
+    text-align:center;
+}
+
+.contact-card .icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.contact-card h3{
+    color:var(--navy);
+    margin-bottom:7px;
+}
+
+.contact-card p{
+    color:var(--text);
+    word-break:break-word;
+}
+
+.contact-card a{
+    color:var(--blue);
+    font-weight:700;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061f40;
+    color:#dce7f5;
+    padding:50px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:35px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:11px;
+}
+
+footer p{
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.15);
+    margin-top:35px;
+    padding-top:18px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* WHATSAPP FLOATING BUTTON */
+
+.whatsapp{
+    position:fixed;
+    right:19px;
+    bottom:19px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:grid;
+    place-items:center;
+    font-weight:900;
+    font-size:24px;
+    box-shadow:0 8px 25px rgba(0,0,0,.22);
+    z-index:1500;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:white;
+        padding:20px 5%;
+        border-bottom:1px solid var(--border);
+        box-shadow:var(--shadow);
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-grid,
+    .founder-grid,
+    .apply-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image-card{
+        max-width:650px;
+        margin:auto;
+    }
+
+    .programs-grid,
+    .contact-grid,
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .topbar-content{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .brand-name{
+        font-size:20px;
+    }
+
+    .brand-full{
+        font-size:9px;
+        max-width:190px;
+    }
+
+    .brand img{
+        width:50px;
+        height:50px;
+    }
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero-text{
+        font-size:16px;
+    }
+
+    .hero-image-card img{
+        height:360px;
+    }
+
+    section{
+        padding:62px 0;
+    }
+
+    .section-head h2{
+        font-size:31px;
+    }
+
+    .about-grid,
+    .programs-grid,
+    .values,
+    .contact-grid,
+    .form-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .founder-content h2{
+        font-size:32px;
+    }
+
+    .apply-info,
+    form{
+        padding:23px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+    }
+
+    .hero-actions .btn{
+        text-align:center;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Push Notification Prompt -->
-    <div class="notification-prompt" id="notifBox">
-        <i class="fa-solid fa-bell" style="color: var(--accent); font-size: 1.2rem;"></i>
-        <div>
-            <p style="font-size: 0.85rem; font-weight: 500;">Hel ogeysiisyada koorsooyinka cusub</p>
-        </div>
-        <button onclick="requestNotif()">Allow Notifications</button>
-    </div>
+<!-- TOP BAR -->
 
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <div>
-            <span class="badge">ANNOUNCEMENT</span>
-            <span>📢 Diiwaangelinta Diploma in Humanitarian Studies waa furan tahay!</span>
-        </div>
-        <div>
-            <i class="fa-solid fa-envelope"></i> drabdikadircareerdevelopment@gmail.com
-        </div>
-    </div>
+<div class="topbar">
+    <div class="container topbar-content">
 
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="brand-logo">
-                <img src="1000110824.jpg" alt="Dr. Abdikadir Institute Logo">
-                <div>
-                    <h1>Dr. Abdikadir Institute</h1>
-                    <span>Career Development & Academic Studies</span>
-                </div>
+        <span>Professional Education • Career Development • Skills Training</span>
+
+        <span>
+            📧
+            <a href="mailto:drabdikadircareerddevelopment@gmail.com">
+                drabdikadircareerddevelopment@gmail.com
             </a>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#founder">Founder</a></li>
-                    <li><a href="#courses">Programs</a></li>
-                    <li><a href="#verify">Verification</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#apply" class="btn-apply">General Application</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </span>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Empowering Leaders, Transforming Communities</h2>
-            <p>Sustained career excellence through practical training, capacity development, and international-standard diplomas.</p>
-            <div class="hero-buttons">
-                <a href="#courses" class="btn-primary">Explore Programs</a>
-                <a href="#apply" class="btn-secondary">Apply Now</a>
+    </div>
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="brand">
+
+            <!-- Logo-ga cusub oo magaciisu sax yahay -->
+            <img src="1000110824.jpg" alt="DACDI Logo">
+
+            <div>
+                <div class="brand-name">DACDI</div>
+
+                <span class="brand-full">
+                    Dr Abdikadir Career Development Institute
+                </span>
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <div class="container" id="about">
-        <div class="section-title">
-            <h3>About the Institute</h3>
-            <p>Official Name: Dr. Abdikadir Career Development & Humanitarian Institute</p>
-        </div>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted);">
-            <p>Dr. Abdikadir Institute is a premier educational center dedicated to offering professional skill-building courses, leadership development, and practical qualifications tailored for emerging leaders, development workers, and career professionals.</p>
-        </div>
+        </a>
+
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#founder">Founder</a>
+            <a href="#programs">Programs</a>
+            <a href="#apply">Apply</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+            ☰
+        </button>
+
     </div>
 
-    <!-- Founder Section -->
-    <div class="container" id="founder">
-        <div class="founder-section">
-            <div class="founder-img">
-                <img src="1000110823.jpg" alt="Dr. Abdikadir Founder">
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                DACDI • Learning • Skills • Opportunity
             </div>
-            <div class="founder-details">
-                <h3>Dr. Abdikadir</h3>
-                <div class="title">Founder & Executive Director</div>
-                <p>Welcome to Dr. Abdikadir Institute. Our commitment is to deliver quality, practical, and highly relevant training programs that equip learners with actionable skills needed in humanitarian, management, and leadership domains.</p>
+
+            <h1>
+                Building Skills.
+                <span>Creating Opportunities.</span>
+            </h1>
+
+            <p class="hero-text">
+                Dr Abdikadir Career Development Institute provides
+                practical learning, professional development and
+                skills-based training opportunities for learners
+                and professionals.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#apply" class="btn btn-primary">
+                    Apply for Training
+                </a>
+
+                <a
+                    href="https://wa.me/252639360772?text=Hello%20DACDI%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20training%20programs."
+                    target="_blank"
+                    class="btn btn-gold">
+                    Chat on WhatsApp (+252 63 9360772)
+                </a>
+
             </div>
+
+            <p class="hero-note">
+                Training programs and schedules are announced
+                when opportunities become available.
+            </p>
+
         </div>
+
+
+        <div class="hero-image-card">
+
+            <!-- Sawirka Founder-ka oo magaciisu sax yahay -->
+            <img
+                src="1000110825.jpg"
+                alt="Founder and Director of DACDI">
+
+        </div>
+
     </div>
 
-    <!-- Programs / 3-Tier Courses -->
-    <div class="container" id="courses">
-        <div class="section-title">
-            <h3>Our Educational Programs</h3>
-            <p>Categorized by current status and institutional training areas</p>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="light-section">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <h2>About DACDI</h2>
+
+            <p>
+                DACDI is a growing career development institute
+                focused on practical education, professional skills
+                and opportunities for learners.
+            </p>
+
         </div>
 
-        <div class="course-grid">
-            <!-- 🟢 Currently Available -->
-            <div class="course-card">
-                <div>
-                    <span class="status-badge status-open">🟢 Registration Open</span>
-                    <h4>Diploma in Humanitarian Studies</h4>
-                    <p>Comprehensive training on humanitarian aid operations, standards, and community development frameworks.</p>
-                </div>
-                <a href="#apply" class="btn-link">Iska Diiwaangeli <i class="fa-solid fa-arrow-right"></i></a>
+
+        <div class="about-grid">
+
+            <div class="info-card">
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To provide accessible, practical and career-focused
+                    learning opportunities that help learners strengthen
+                    their knowledge, skills and professional confidence.
+                </p>
+
             </div>
 
-            <div class="course-card">
-                <div>
-                    <span class="status-badge status-open">🟢 Registration Open</span>
-                    <h4>UNV & Career Success Training</h4>
-                    <p>Practical skills on navigating international organization applications and professional interview prep.</p>
-                </div>
-                <a href="#apply" class="btn-link">Iska Diiwaangeli <i class="fa-solid fa-arrow-right"></i></a>
+
+            <div class="info-card">
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    To grow into a respected professional learning
+                    institution connecting learners with relevant
+                    knowledge, skills and opportunities in Somalia
+                    and beyond.
+                </p>
+
             </div>
 
-            <!-- 🟡 Upcoming Programs -->
-            <div class="course-card">
-                <div>
-                    <span class="status-badge status-upcoming">🟡 Upcoming Program</span>
-                    <h4>Nonprofit Leadership & Management</h4>
-                    <p>Advanced strategic planning, resource mobilization, and NGO organizational leadership.</p>
-                </div>
-                <a href="#apply" class="btn-link">Join Waiting List <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <!-- 🔵 Training Areas -->
-            <div class="course-card">
-                <div>
-                    <span class="status-badge status-area">🔵 Professional Training Area</span>
-                    <h4>Project Management & Proposal Writing</h4>
-                    <p>Standard methodologies for project design, implementation, and donor report drafting.</p>
-                </div>
-                <a href="#apply" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="course-card">
-                <div>
-                    <span class="status-badge status-area">🔵 Professional Training Area</span>
-                    <h4>Monitoring, Evaluation, Accountability & Learning (MEAL)</h4>
-                    <p>Data collection, project auditing, and performance tracking frameworks for NGOs.</p>
-                </div>
-                <a href="#apply" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="course-card">
-                <div>
-                    <span class="status-badge status-area">🔵 Professional Training Area</span>
-                    <h4>Research & Academic Writing</h4>
-                    <p>Methodologies for field research, report publishing, and academic data analysis.</p>
-                </div>
-                <a href="#apply" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
         </div>
+
+
+        <div class="values">
+
+            <div class="value-card">
+                <div class="icon">🎓</div>
+                <h4>Learning</h4>
+                <p>Continuous learning and knowledge development.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="icon">💡</div>
+                <h4>Innovation</h4>
+                <p>Encouraging practical ideas and new solutions.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="icon">🤝</div>
+                <h4>Professionalism</h4>
+                <p>Promoting responsibility and professional standards.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="icon">🌍</div>
+                <h4>Opportunity</h4>
+                <p>Connecting learners with relevant opportunities.</p>
+            </div>
+
+        </div>
+
     </div>
 
-    <!-- Certificate Verification Section -->
-    <div class="container" id="verify">
-        <div class="cert-box">
-            <h3>Certificate Verification Portal</h3>
-            <p style="color: #CBD5E1; margin-top: 8px;">Verify authentic academic certificates issued by Dr. Abdikadir Institute.</p>
-            <div class="cert-form">
-                <input type="text" id="certInput" placeholder="Enter Certificate Serial ID (e.g., DAI-2026-889)">
-                <button onclick="verifyCert()">Verify Certificate</button>
-            </div>
-            <div id="certResult" style="margin-top: 15px; font-weight: 500;"></div>
+</section>
+
+
+<!-- FOUNDER -->
+
+<section id="founder">
+
+    <div class="container founder-grid">
+
+        <img
+            src="1000110825.jpg"
+            alt="Founder and Director of DACDI"
+            class="founder-photo">
+
+
+        <div class="founder-content">
+
+            <span class="label">
+                Founder & Director
+            </span>
+
+            <h2>
+                Dr Abdikadir Career Development Institute
+            </h2>
+
+            <p>
+                DACDI was established with a focus on career
+                development, practical learning and professional
+                skills development.
+            </p>
+
+            <p>
+                The institute continues to develop learning
+                opportunities that respond to emerging needs,
+                professional growth and access to opportunities.
+            </p>
+
         </div>
+
     </div>
 
-    <!-- Testimonials / Success Stories -->
-    <div class="container" id="testimonials">
-        <div class="section-title">
-            <h3>Student Success Stories</h3>
-            <p>In Collaboration with African Education & Humanitarian Development Organization (AEHDO)</p>
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section id="programs" class="light-section">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <h2>Programs & Training Areas</h2>
+
+            <p>
+                DACDI provides training opportunities according to
+                program availability, learner needs and emerging
+                opportunities.
+            </p>
+
         </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <img src="1000110821.jpg" alt="Testimonial Abdikani Adem Hassan">
+
+
+        <div class="programs-grid">
+
+            <div class="program-card">
+                <span class="status">Training Area</span>
+                <h3>NGO Management & Project Cycle Management</h3>
+                <p>Professional skills for NGO operations and project work.</p>
             </div>
-            <div class="testimonial-card">
-                <img src="1000110822.jpg" alt="Testimonial Mahad Abdullahi Abdirahman">
+
+            <div class="program-card">
+                <span class="status">Training Area</span>
+                <h3>Humanitarian Crisis Management</h3>
+                <p>Practical learning related to humanitarian response and crisis management.</p>
             </div>
-            <div class="testimonial-card">
-                <img src="1000110818.jpg" alt="Testimonial Farhio Abdullahi Salad">
+
+            <div class="program-card">
+                <span class="status">Training Area</span>
+                <h3>Humanitarian Report Writing</h3>
+                <p>Writing skills for humanitarian and development reporting.</p>
             </div>
+
+            <div class="program-card">
+                <span class="status">Training Area</span>
+                <h3>UN Volunteers (UNV) Success Training</h3>
+                <p>Preparation and guidance related to UNV opportunities and applications.</p>
+            </div>
+
+            <div class="program-card">
+                <span class="status">Training Area</span>
+                <h3>International Conferences & Scholarships</h3>
+                <p>Guidance for international conference and scholarship opportunities.</p>
+            </div>
+
+            <div class="program-card">
+                <span class="status">Training Area</span>
+                <h3>Leadership & Capacity Building</h3>
+                <p>Developing strategic leadership and institutional growth skills.</p>
+            </div>
+
         </div>
+
     </div>
 
-    <!-- General Application Form -->
-    <div class="container" id="apply">
-        <div class="section-title">
-            <h3>General Application / Inquiry Form</h3>
-            <p>Apply for open courses or express interest in upcoming programs</p>
+</section>
+
+
+<!-- APPLY -->
+
+<section id="apply">
+
+    <div class="container apply-grid">
+
+        <div class="apply-info">
+
+            <h3>Apply for Training</h3>
+
+            <p>
+                Fill out the form to register your interest in our upcoming career development programs.
+            </p>
+
+            <p>
+                <strong>WhatsApp:</strong> +252 63 9360772
+            </p>
+
+            <p>
+                <strong>Email:</strong> drabdikadircareerddevelopment@gmail.com
+            </p>
+
         </div>
-        <div class="app-form">
-            <form id="generalForm" onsubmit="handleFormSubmit(event)">
+
+
+        <form action="https://wa.me/252639360772" method="get" target="_blank">
+
+            <div class="form-grid">
+
                 <div class="form-group">
-                    <label>Magaca Buuxa (Full Name)</label>
-                    <input type="text" id="fullName" required placeholder="Gali magacaaga buuxa">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
                 </div>
+
                 <div class="form-group">
-                    <label>Nambarka Mobilka / WhatsApp</label>
-                    <input type="tel" id="phoneNum" required placeholder="+252 XXXXXXXX">
+                    <label>Phone / WhatsApp</label>
+                    <input type="tel" placeholder="+252..." required>
                 </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" id="emailAddr" required placeholder="Gali email-kaaga">
-                </div>
-                <div class="form-group">
-                    <label>Magaalada / City</label>
-                    <input type="text" id="cityLoc" required placeholder="Magaalada aad joogto">
-                </div>
-                <div class="form-group">
-                    <label>Program of Interest</label>
-                    <select id="courseSelect" required>
-                        <option value="Diploma in Humanitarian Studies">Diploma in Humanitarian Studies (🟢 Registration Open)</option>
-                        <option value="UNV & Career Success Training">UNV & Career Success Training (🟢 Registration Open)</option>
-                        <option value="Nonprofit Leadership & Management">Nonprofit Leadership & Management (🟡 Waiting List)</option>
-                        <option value="Project Management & Proposal Writing">Project Management & Proposal Writing</option>
-                        <option value="MEAL Training">Monitoring & Evaluation (MEAL)</option>
-                        <option value="Other / General Inquiry">Inquiry / Other Course</option>
+
+                <div class="form-group full">
+                    <label>Select Program</label>
+                    <select required>
+                        <option value="">Select a program...</option>
+                        <option>NGO Management & Project Cycle Management</option>
+                        <option>Humanitarian Crisis Management</option>
+                        <option>Humanitarian Report Writing</option>
+                        <option>UN Volunteers (UNV) Success Training</option>
+                        <option>International Conferences & Scholarships</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>Qoraal Dheeraad ah (Message)</label>
-                    <textarea id="userMsg" rows="4" placeholder="Fariintaada ama waxa aad u baahan tahay..."></textarea>
+
+                <div class="form-group full">
+                    <button type="submit" class="btn btn-primary">
+                        Submit Application via WhatsApp
+                    </button>
                 </div>
-                <button type="submit" class="form-submit">Submit Application via WhatsApp</button>
-            </form>
-        </div>
+
+            </div>
+
+        </form>
+
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h4 style="margin-bottom: 12px; color: var(--accent);">Dr. Abdikadir Institute</h4>
-                <p style="font-size: 0.85rem; color: #94A3B8;">Official Name: Dr. Abdikadir Career Development & Humanitarian Institute. Dedicated to educational excellence and leadership development.</p>
-            </div>
-            <div>
-                <h4 style="margin-bottom: 12px;">Quick Links</h4>
-                <ul style="list-style: none; font-size: 0.85rem;">
-                    <li><a href="#about" style="color: #94A3B8; text-decoration: none;">About Us</a></li>
-                    <li><a href="#courses" style="color: #94A3B8; text-decoration: none;">Training Programs</a></li>
-                    <li><a href="#verify" style="color: #94A3B8; text-decoration: none;">Verify Certificate</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="margin-bottom: 12px;">Contact Information</h4>
-                <p style="font-size: 0.85rem; color: #94A3B8;"><i class="fa-solid fa-envelope"></i> drabdikadircareerdevelopment@gmail.com</p>
-                <p style="font-size: 0.85rem; color: #94A3B8; margin-top: 6px;"><i class="fa-solid fa-globe"></i> Global Online & Regional Center</p>
-            </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="light-section">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <h2>Contact Us</h2>
+
+            <p>Get in touch with Dr Abdikadir Career Development Institute.</p>
+
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Dr. Abdikadir Institute. All Rights Reserved. | Designed for Enterprise Academic Standards.</p>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <div class="icon">📱</div>
+                <h3>WhatsApp / Phone</h3>
+                <p><a href="https://wa.me/252639360772" target="_blank">+252 63 9360772</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <h3>Email</h3>
+                <p><a href="mailto:drabdikadircareerddevelopment@gmail.com">drabdikadircareerddevelopment@gmail.com</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📍</div>
+                <h3>Location</h3>
+                <p>Somalia</p>
+            </div>
+
         </div>
-    </footer>
 
-    <!-- JavaScript Automation -->
-    <script>
-        function requestNotif() {
-            alert("Waad ku mahadsan tahay! Ogeysiisyada machadka waa loo ogolaaday browser-kaaga.");
-            document.getElementById('notifBox').style.display = 'none';
-        }
+    </div>
 
-        function verifyCert() {
-            const id = document.getElementById('certInput').value.trim();
-            const resultDiv = document.getElementById('certResult');
-            if (id === "") {
-                resultDiv.innerHTML = "<span style='color: #F59E0B;'>Fadlan qor Serial Number-ka Shahaadada.</span>";
-            } else {
-                resultDiv.innerHTML = "<span style='color: #10B981;'><i class='fa-solid fa-circle-check'></i> Shahaadada ID (" + id + ") waa mid dhab ah oo ka soo baxday Dr. Abdikadir Institute.</span>";
-            }
-        }
+</section>
 
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const name = document.getElementById('fullName').value;
-            const phone = document.getElementById('phoneNum').value;
-            const email = document.getElementById('emailAddr').value;
-            const city = document.getElementById('cityLoc').value;
-            const course = document.getElementById('courseSelect').value;
-            const msg = document.getElementById('userMsg').value;
+</main>
 
-            const textMsg = `*Aapplication Request - Dr. Abdikadir Institute*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*City:* ${city}%0A*Course Selected:* ${course}%0A*Message:* ${msg}`;
-            
-            // Redirects to official institute contact
-            window.open(`https://wa.me/?text=${textMsg}`, '_blank');
-        }
-    </script>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div>
+            <h3>DACDI</h3>
+            <p>Dr Abdikadir Career Development Institute</p>
+            <p>Building skills and creating career opportunities.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <p><a href="#home">Home</a></p>
+            <p><a href="#about">About</a></p>
+            <p><a href="#programs">Programs</a></p>
+            <p><a href="#apply">Apply</a></p>
+        </div>
+
+        <div>
+            <h3>Direct Contact</h3>
+            <p>WhatsApp: +252 63 9360772</p>
+            <p>Email: drabdikadircareerddevelopment@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © DACDI - Dr Abdikadir Career Development Institute. All rights reserved.
+    </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a
+    href="https://wa.me/252639360772?text=Hello%20DACDI%2C%20I%20would%20like%20to%20apply%20for%20a%20course."
+    class="whatsapp"
+    target="_blank"
+    title="Chat on WhatsApp">
+    💬
+</a>
+
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    if(menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+</script>
+
 </body>
-</html> 
+</html>
