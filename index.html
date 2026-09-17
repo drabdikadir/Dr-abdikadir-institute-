@@ -1,29 +1,25 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="DACDI – Dr Abdikadir Career Development Institute. Professional education, career development, humanitarian and practical skills training.">
-
-<meta name="keywords" content="DACDI, Dr Abdikadir Career Development Institute, training, career development, NGO management, humanitarian training, leadership">
+<meta name="description" content="DACDI – Dr Abdikadir Career Development Institute. Professional education, career development and practical skills training.">
 
 <title>DACDI | Dr Abdikadir Career Development Institute</title>
 
 <style>
-
 :root{
-    --navy:#082b59;
-    --blue:#1268c4;
-    --gold:#c99a2e;
-    --light:#f5f8fc;
+    --navy:#061f40;
+    --blue:#0b5ed7;
+    --light-blue:#eaf3ff;
+    --gold:#d4a72c;
     --white:#ffffff;
-    --dark:#172235;
-    --text:#445166;
-    --border:#e4e9f0;
-    --green:#25D366;
-    --shadow:0 12px 35px rgba(8,43,89,.10);
+    --text:#26364a;
+    --muted:#68778a;
+    --light:#f6f9fc;
+    --border:#e2e8f0;
+    --shadow:0 10px 30px rgba(6,31,64,.10);
 }
 
 *{
@@ -38,9 +34,9 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    color:var(--dark);
+    color:var(--text);
+    background:#fff;
     line-height:1.7;
-    background:white;
 }
 
 a{
@@ -54,20 +50,18 @@ img{
 }
 
 .container{
-    width:min(1150px,92%);
+    width:90%;
+    max-width:1180px;
     margin:auto;
 }
 
-
-/* =========================
-   TOP BAR
-========================= */
+/* TOP BAR */
 
 .topbar{
     background:var(--navy);
-    color:white;
-    font-size:13px;
-    padding:8px 0;
+    color:#fff;
+    padding:9px 0;
+    font-size:14px;
 }
 
 .topbar-content{
@@ -75,39 +69,38 @@ img{
     justify-content:space-between;
     align-items:center;
     gap:15px;
-    flex-wrap:wrap;
 }
 
 .topbar a{
-    color:white;
+    color:#fff;
 }
 
+.topbar a:hover{
+    color:#ffd76a;
+}
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
+    background:#fff;
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.97);
-    border-bottom:1px solid var(--border);
-    backdrop-filter:blur(10px);
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
 }
 
 .navbar{
-    min-height:78px;
+    min-height:82px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    gap:25px;
 }
 
 .brand{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:13px;
 }
 
 .brand img{
@@ -116,457 +109,354 @@ header{
     object-fit:contain;
 }
 
-.brand-name{
-    font-size:23px;
-    font-weight:800;
-    color:var(--navy);
-    letter-spacing:.5px;
+.brand-text{
+    line-height:1.2;
 }
 
-.brand-full{
+.brand-text strong{
     display:block;
-    font-size:10px;
-    color:#687487;
-    line-height:1.3;
-    max-width:240px;
+    font-size:25px;
+    color:var(--navy);
+    letter-spacing:1px;
+}
+
+.brand-text span{
+    display:block;
+    font-size:11px;
+    color:var(--muted);
+    margin-top:4px;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:24px;
+    list-style:none;
 }
 
 .nav-links a{
     font-size:14px;
     font-weight:700;
-    color:#26364a;
+    color:var(--navy);
+    transition:.3s;
 }
 
 .nav-links a:hover{
     color:var(--blue);
 }
 
-.nav-apply{
-    background:var(--navy);
-    color:white !important;
-    padding:10px 16px;
-    border-radius:8px;
-}
-
 .menu-btn{
     display:none;
     border:0;
     background:var(--navy);
-    color:white;
-    font-size:22px;
-    width:43px;
-    height:43px;
-    border-radius:8px;
+    color:#fff;
+    font-size:24px;
+    width:44px;
+    height:42px;
+    border-radius:7px;
     cursor:pointer;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     background:
-    linear-gradient(135deg,#edf5ff 0%,#ffffff 55%,#fff8e8 100%);
-    padding:90px 0;
+    linear-gradient(90deg,rgba(6,31,64,.96),rgba(6,31,64,.76)),
+    url("FB_IMG_1789365328830.jpg") center/cover no-repeat;
+    min-height:570px;
+    display:flex;
+    align-items:center;
+    color:#fff;
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:60px;
+    grid-template-columns:1.15fr .85fr;
     align-items:center;
+    gap:50px;
 }
 
-.eyebrow{
-    color:var(--gold);
+.hero-content{
+    max-width:700px;
+}
+
+.hero-tag{
+    display:inline-block;
+    background:rgba(212,167,44,.18);
+    border:1px solid rgba(255,255,255,.3);
+    color:#ffd96b;
+    padding:8px 15px;
+    border-radius:30px;
     font-size:13px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    margin-bottom:12px;
+    font-weight:700;
+    margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:clamp(40px,5vw,65px);
-    line-height:1.08;
-    color:var(--navy);
-    margin-bottom:22px;
+    font-size:52px;
+    line-height:1.12;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:var(--blue);
+    color:#ffd45c;
 }
 
-.hero-text{
+.hero p{
     font-size:18px;
-    color:var(--text);
-    max-width:680px;
+    color:#e5edf7;
+    max-width:650px;
+    margin-bottom:28px;
 }
 
-.hero-actions{
+.hero-buttons{
     display:flex;
-    gap:12px;
     flex-wrap:wrap;
-    margin-top:30px;
+    gap:13px;
 }
 
 .btn{
     display:inline-block;
-    padding:13px 21px;
-    border-radius:9px;
-    font-weight:800;
-    border:none;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
+    padding:13px 23px;
+    border-radius:7px;
+    font-weight:700;
+    font-size:14px;
+    transition:.3s;
 }
 
 .btn-primary{
-    background:var(--navy);
-    color:white;
+    background:var(--gold);
+    color:var(--navy);
 }
 
-.btn-gold{
-    background:var(--gold);
-    color:white;
+.btn-primary:hover{
+    transform:translateY(-2px);
 }
 
 .btn-outline{
-    border:1px solid var(--navy);
-    color:var(--navy);
-    background:white;
+    border:1px solid #fff;
+    color:#fff;
 }
 
-.hero-note{
-    margin-top:17px;
-    color:#6b7687;
-    font-size:13px;
+.btn-outline:hover{
+    background:#fff;
+    color:var(--navy);
 }
 
 .hero-image-card{
-    background:white;
-    padding:15px;
-    border-radius:24px;
-    box-shadow:var(--shadow);
-    border:1px solid var(--border);
+    background:rgba(255,255,255,.10);
+    padding:12px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.2);
 }
 
 .hero-image-card img{
     width:100%;
-    height:470px;
+    height:380px;
     object-fit:cover;
-    border-radius:17px;
+    border-radius:10px;
 }
 
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* GENERAL */
 
 section{
-    padding:82px 0;
+    padding:80px 0;
 }
 
-.section-head{
-    max-width:780px;
-    margin:0 auto 45px;
+.section-heading{
     text-align:center;
+    max-width:720px;
+    margin:0 auto 45px;
 }
 
-.section-head h2{
+.section-heading .small-title{
+    color:var(--blue);
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:7px;
+}
+
+.section-heading h2{
     color:var(--navy);
-    font-size:37px;
-    margin-bottom:10px;
+    font-size:36px;
+    margin-bottom:12px;
 }
 
-.section-head p{
-    color:var(--text);
+.section-heading p{
+    color:var(--muted);
 }
 
-.light-section{
-    background:var(--light);
+/* ABOUT */
+
+.about{
+    background:#fff;
 }
-
-
-/* =========================
-   ABOUT
-========================= */
 
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:25px;
+    gap:45px;
+    align-items:start;
 }
 
-.info-card{
-    background:white;
+.about-card{
+    background:var(--light);
     border:1px solid var(--border);
+    border-radius:14px;
     padding:30px;
-    border-radius:17px;
-    box-shadow:0 7px 22px rgba(8,43,89,.05);
+    box-shadow:var(--shadow);
 }
 
-.info-card h3{
+.about-card h3{
     color:var(--navy);
-    margin-bottom:10px;
-    font-size:22px;
+    margin-bottom:13px;
+    font-size:23px;
 }
 
-.info-card p{
-    color:var(--text);
+.about-card p{
+    color:var(--muted);
 }
 
 .values{
-    margin-top:25px;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:22px;
 }
 
-.value-card{
-    background:white;
+.value{
+    background:#fff;
     border:1px solid var(--border);
-    border-radius:14px;
-    padding:23px;
-    text-align:center;
+    border-radius:10px;
+    padding:18px;
 }
 
-.value-card .icon{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.value-card h4{
+.value h4{
     color:var(--navy);
-    margin-bottom:6px;
+    margin-bottom:5px;
 }
 
-.value-card p{
-    font-size:13px;
-    color:var(--text);
+.value p{
+    font-size:14px;
 }
 
+/* FOUNDER */
 
-/* =========================
-   FOUNDER
-========================= */
+.founder{
+    background:var(--light);
+}
 
 .founder-grid{
     display:grid;
     grid-template-columns:.8fr 1.2fr;
-    gap:55px;
+    gap:50px;
     align-items:center;
 }
 
 .founder-photo{
-    width:100%;
-    max-height:600px;
-    object-fit:cover;
-    border-radius:20px;
+    background:#fff;
+    padding:10px;
+    border-radius:15px;
     box-shadow:var(--shadow);
 }
 
-.label{
-    display:inline-block;
-    background:#edf5ff;
-    color:var(--navy);
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:12px;
+.founder-photo img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.founder-content .label{
+    color:var(--blue);
+    font-size:13px;
     font-weight:800;
-    margin-bottom:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
 .founder-content h2{
-    font-size:40px;
     color:var(--navy);
-    line-height:1.2;
-    margin-bottom:15px;
+    font-size:36px;
+    margin:8px 0 15px;
 }
 
 .founder-content p{
-    color:var(--text);
+    color:var(--muted);
     margin-bottom:15px;
 }
 
+/* PROGRAMS */
 
-/* =========================
-   PROGRAMS
-========================= */
+.programs{
+    background:#fff;
+}
 
-.programs-grid{
+.program-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
 .program-card{
-    background:white;
     border:1px solid var(--border);
-    border-radius:16px;
-    padding:24px;
-    box-shadow:0 7px 22px rgba(8,43,89,.05);
-    transition:.2s;
+    border-radius:13px;
+    padding:25px;
+    background:#fff;
+    box-shadow:0 6px 20px rgba(6,31,64,.06);
+    transition:.3s;
 }
 
 .program-card:hover{
-    transform:translateY(-4px);
+    transform:translateY(-5px);
     box-shadow:var(--shadow);
 }
 
-.status{
-    display:inline-block;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:800;
-    background:#edf5ff;
-    color:var(--navy);
-    margin-bottom:13px;
+.program-icon{
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--light-blue);
+    border-radius:10px;
+    font-size:22px;
+    margin-bottom:15px;
 }
 
 .program-card h3{
     color:var(--navy);
     font-size:18px;
-    line-height:1.4;
     margin-bottom:8px;
 }
 
 .program-card p{
-    color:var(--text);
+    color:var(--muted);
     font-size:14px;
 }
 
+/* STATUS */
 
-/* =========================
-   STUDENT ACHIEVEMENTS
-========================= */
-
-.achievement-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.achievement-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 7px 22px rgba(8,43,89,.06);
-    transition:.2s;
-}
-
-.achievement-card:hover{
-    transform:translateY(-4px);
-    box-shadow:var(--shadow);
-}
-
-.achievement-card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-}
-
-.achievement-content{
-    padding:18px;
-    text-align:center;
-}
-
-.achievement-content h3{
-    color:var(--navy);
-    font-size:17px;
-    margin-bottom:5px;
-}
-
-.achievement-content p{
+.status-note{
+    background:var(--light-blue);
+    border-left:5px solid var(--blue);
+    padding:18px 20px;
+    border-radius:8px;
+    margin-top:30px;
     color:var(--text);
-    font-size:13px;
 }
 
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.gallery-item{
-    overflow:hidden;
-    border-radius:16px;
-    background:white;
-    border:1px solid var(--border);
-    box-shadow:0 7px 22px rgba(8,43,89,.06);
-}
-
-.gallery-item img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    transition:.3s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.04);
-}
-
-
-/* =========================
-   VIDEOS
-========================= */
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
-
-.video-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 7px 22px rgba(8,43,89,.06);
-}
-
-.video-card iframe{
-    width:100%;
-    height:300px;
-    border:0;
-}
-
-.video-content{
-    padding:20px;
-}
-
-.video-content h3{
+.status-note strong{
     color:var(--navy);
-    margin-bottom:7px;
 }
 
-.video-content p{
-    color:var(--text);
-    font-size:14px;
+/* ANNOUNCEMENTS */
+
+.announcements{
+    background:var(--light);
 }
-
-
-/* =========================
-   ANNOUNCEMENTS
-========================= */
 
 .announcement-grid{
     display:grid;
@@ -575,111 +465,184 @@ section{
 }
 
 .announcement-card{
-    background:white;
+    background:#fff;
     border:1px solid var(--border);
-    border-radius:16px;
+    border-radius:13px;
     padding:25px;
-    box-shadow:0 7px 22px rgba(8,43,89,.05);
-    position:relative;
+    box-shadow:0 6px 20px rgba(6,31,64,.06);
 }
 
-.announcement-badge{
+.announcement-date{
     display:inline-block;
-    background:#edf5ff;
-    color:var(--navy);
+    background:var(--light-blue);
+    color:var(--blue);
     padding:5px 10px;
     border-radius:20px;
-    font-size:11px;
-    font-weight:800;
+    font-size:12px;
+    font-weight:700;
     margin-bottom:13px;
 }
 
 .announcement-card h3{
     color:var(--navy);
-    font-size:19px;
     margin-bottom:8px;
 }
 
 .announcement-card p{
-    color:var(--text);
+    color:var(--muted);
     font-size:14px;
 }
 
-.announcement-date{
-    margin-top:15px;
-    font-size:12px;
-    color:#778396;
+/* WHY DACDI */
+
+.why{
+    background:#fff;
 }
-
-
-/* =========================
-   WHY DACDI
-========================= */
 
 .why-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    gap:18px;
 }
 
 .why-card{
-    padding:27px;
-    border:1px solid var(--border);
-    border-radius:16px;
-    background:white;
     text-align:center;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:25px 18px;
 }
 
 .why-card .icon{
-    font-size:31px;
-    margin-bottom:12px;
+    font-size:30px;
+    margin-bottom:10px;
 }
 
 .why-card h3{
     color:var(--navy);
-    margin-bottom:8px;
-    font-size:18px;
+    font-size:17px;
+    margin-bottom:7px;
 }
 
 .why-card p{
-    color:var(--text);
+    color:var(--muted);
     font-size:13px;
 }
 
+/* STUDENT ACHIEVEMENTS */
 
-/* =========================
-   TESTIMONIALS
-========================= */
+.achievements{
+    background:var(--light);
+}
 
-.testimonial-grid{
+.student-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:22px;
 }
 
-.testimonial-card{
-    background:white;
+.student-card{
+    background:#fff;
     border:1px solid var(--border);
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 7px 22px rgba(8,43,89,.05);
+    border-radius:13px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(6,31,64,.06);
 }
 
-.testimonial-card p{
-    color:var(--text);
-    font-size:14px;
-    font-style:italic;
+.student-card img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
 }
 
-.testimonial-card h4{
+.student-info{
+    padding:18px;
+}
+
+.student-info h3{
     color:var(--navy);
-    margin-top:15px;
+    font-size:17px;
 }
 
+.student-info p{
+    color:var(--muted);
+    font-size:13px;
+}
 
-/* =========================
-   FAQ
-========================= */
+/* APPLICATION */
+
+.application{
+    background:#fff;
+}
+
+.form-box{
+    max-width:850px;
+    margin:auto;
+    background:var(--light);
+    border:1px solid var(--border);
+    padding:35px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    margin-bottom:4px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    display:block;
+    font-size:14px;
+    font-weight:700;
+    color:var(--navy);
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    border:1px solid #ccd6e2;
+    border-radius:7px;
+    padding:12px 13px;
+    font-size:14px;
+    outline:none;
+    background:#fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:var(--blue);
+}
+
+.form-group textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.form-submit{
+    margin-top:20px;
+}
+
+.form-submit button{
+    border:0;
+    cursor:pointer;
+}
+
+/* FAQ */
+
+.faq{
+    background:var(--light);
+}
 
 .faq-grid{
     max-width:850px;
@@ -687,9 +650,9 @@ section{
 }
 
 .faq-item{
-    background:white;
+    background:#fff;
     border:1px solid var(--border);
-    border-radius:12px;
+    border-radius:10px;
     margin-bottom:12px;
     padding:20px;
 }
@@ -701,140 +664,37 @@ section{
 }
 
 .faq-item p{
-    color:var(--text);
+    color:var(--muted);
     font-size:14px;
 }
 
+/* CONTACT */
 
-/* =========================
-   REGISTRATION
-========================= */
-
-.apply-grid{
-    display:grid;
-    grid-template-columns:.75fr 1.25fr;
-    gap:35px;
-    align-items:start;
+.contact{
+    background:#fff;
 }
-
-.apply-info{
-    background:var(--navy);
-    color:white;
-    border-radius:18px;
-    padding:32px;
-}
-
-.apply-info h3{
-    font-size:25px;
-    margin-bottom:13px;
-}
-
-.apply-info p{
-    margin-bottom:12px;
-    color:#e4edf9;
-}
-
-.apply-info strong{
-    color:white;
-}
-
-.registration-note{
-    margin-top:22px;
-    padding:15px;
-    background:rgba(255,255,255,.10);
-    border-radius:10px;
-    font-size:13px;
-}
-
-form{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:30px;
-    box-shadow:var(--shadow);
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:17px;
-}
-
-.form-group{
-    display:flex;
-    flex-direction:column;
-}
-
-.form-group.full{
-    grid-column:1/-1;
-}
-
-label{
-    color:var(--navy);
-    font-size:14px;
-    font-weight:800;
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    margin-top:6px;
-    padding:13px;
-    border:1px solid #d7dee8;
-    border-radius:9px;
-    font:inherit;
-    outline:none;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-    border-color:var(--blue);
-}
-
-textarea{
-    min-height:120px;
-    resize:vertical;
-}
-
-.form-submit{
-    width:100%;
-    font-size:15px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
 
 .contact-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
 .contact-card{
-    background:white;
+    background:var(--light);
     border:1px solid var(--border);
-    border-radius:16px;
-    padding:27px;
-    text-align:center;
-}
-
-.contact-card .icon{
-    font-size:30px;
-    margin-bottom:10px;
+    border-radius:13px;
+    padding:25px;
 }
 
 .contact-card h3{
     color:var(--navy);
-    margin-bottom:7px;
+    margin-bottom:12px;
 }
 
 .contact-card p{
-    color:var(--text);
-    word-break:break-word;
+    color:var(--muted);
+    margin-bottom:8px;
 }
 
 .contact-card a{
@@ -842,35 +702,31 @@ textarea{
     font-weight:700;
 }
 
-
-/* =========================
-   SOCIAL BUTTON
-========================= */
-
 .social-buttons{
     display:flex;
-    justify-content:center;
-    gap:12px;
     flex-wrap:wrap;
-    margin-top:30px;
+    gap:12px;
+    margin-top:18px;
 }
 
 .social-btn{
     display:inline-block;
-    padding:12px 20px;
-    border-radius:9px;
-    font-weight:800;
-    background:#1877F2;
-    color:white;
+    padding:11px 17px;
+    border-radius:7px;
+    font-weight:700;
+    font-size:14px;
+    background:var(--navy);
+    color:#fff;
 }
 
+.social-btn:hover{
+    background:var(--blue);
+}
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
-    background:#061f40;
+    background:var(--navy);
     color:#dce7f5;
     padding:50px 0 20px;
 }
@@ -881,29 +737,31 @@ footer{
     gap:35px;
 }
 
-footer h3{
-    color:white;
-    margin-bottom:11px;
+.footer-col h3{
+    color:#fff;
+    margin-bottom:15px;
 }
 
-footer p{
+.footer-col p{
+    color:#c6d4e5;
     font-size:14px;
-    margin-bottom:6px;
 }
 
-footer a:hover{
-    color:white;
+.footer-links{
+    list-style:none;
 }
 
-.footer-social{
-    display:inline-block;
-    margin-top:10px;
-    background:#1877F2;
-    color:white;
-    padding:9px 14px;
-    border-radius:7px;
-    font-size:13px;
-    font-weight:700;
+.footer-links li{
+    margin-bottom:8px;
+}
+
+.footer-links a{
+    color:#c6d4e5;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#fff;
 }
 
 .copyright{
@@ -911,51 +769,48 @@ footer a:hover{
     margin-top:35px;
     padding-top:18px;
     text-align:center;
+    color:#aebed0;
     font-size:13px;
 }
 
+/* WHATSAPP */
 
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp{
+.whatsapp-float{
     position:fixed;
-    right:19px;
-    bottom:19px;
-    width:60px;
-    height:60px;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    width:58px;
+    height:58px;
     border-radius:50%;
-    background:var(--green);
-    color:white;
-    display:grid;
-    place-items:center;
-    font-weight:900;
-    font-size:24px;
-    box-shadow:0 8px 25px rgba(0,0,0,.22);
-    z-index:1500;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    box-shadow:0 7px 20px rgba(0,0,0,.2);
 }
 
+.whatsapp-float:hover{
+    transform:scale(1.06);
+}
 
-/* =========================
-   MOBILE
-========================= */
+/* RESPONSIVE */
 
-@media(max-width:950px){
+@media(max-width:900px){
 
     .nav-links{
-        display:none;
         position:absolute;
-        top:78px;
+        top:82px;
         left:0;
         right:0;
-        background:white;
-        padding:20px 5%;
-        border-bottom:1px solid var(--border);
-        box-shadow:var(--shadow);
+        background:#fff;
+        display:none;
         flex-direction:column;
         align-items:flex-start;
-        gap:16px;
+        padding:20px 5%;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
     }
 
     .nav-links.active{
@@ -967,306 +822,1131 @@ footer a:hover{
     }
 
     .hero-grid,
+    .about-grid,
     .founder-grid,
-    .apply-grid{
+    .contact-grid{
         grid-template-columns:1fr;
     }
 
-    .hero-image-card{
-        max-width:650px;
-        margin:auto;
+    .hero{
+        padding:70px 0;
     }
 
-    .programs-grid,
-    .contact-grid,
-    .footer-grid,
-    .achievement-grid,
-    .why-grid{
-        grid-template-columns:1fr 1fr;
+    .hero h1{
+        font-size:42px;
     }
 
+    .program-grid,
     .announcement-grid,
-    .testimonial-grid{
-        grid-template-columns:1fr 1fr;
+    .student-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .gallery-grid,
-    .video-grid{
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
         grid-template-columns:1fr 1fr;
     }
 }
-
 
 @media(max-width:600px){
 
     .topbar-content{
-        justify-content:center;
+        flex-direction:column;
         text-align:center;
+        gap:4px;
     }
 
-    .brand-name{
-        font-size:20px;
-    }
-
-    .brand-full{
-        font-size:9px;
-        max-width:190px;
+    .navbar{
+        min-height:74px;
     }
 
     .brand img{
-        width:50px;
-        height:50px;
+        width:48px;
+        height:48px;
+    }
+
+    .brand-text strong{
+        font-size:21px;
+    }
+
+    .brand-text span{
+        font-size:9px;
+    }
+
+    .nav-links{
+        top:74px;
+    }
+
+    section{
+        padding:60px 0;
     }
 
     .hero{
-        padding:65px 0;
+        min-height:auto;
+        padding:60px 0;
     }
 
     .hero h1{
-        font-size:40px;
+        font-size:34px;
     }
 
-    .hero-text{
+    .hero p{
         font-size:16px;
     }
 
     .hero-image-card img{
-        height:360px;
+        height:300px;
     }
 
-    section{
-        padding:62px 0;
+    .section-heading h2{
+        font-size:29px;
     }
 
-    .section-head h2{
-        font-size:31px;
-    }
-
-    .about-grid,
-    .programs-grid,
     .values,
-    .contact-grid,
-    .form-grid,
-    .footer-grid,
-    .achievement-grid,
-    .gallery-grid,
-    .video-grid,
-    .announcement-grid,
-    .why-grid,
-    .testimonial-grid{
+    .form-grid{
         grid-template-columns:1fr;
     }
 
-    .founder-content h2{
-        font-size:32px;
+    .form-group.full{
+        grid-column:auto;
     }
 
-    .apply-info,
-    form{
-        padding:23px;
+    .program-grid,
+    .announcement-grid,
+    .student-grid,
+    .why-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero-actions{
-        flex-direction:column;
+    .founder-photo img{
+        height:350px;
     }
 
-    .hero-actions .btn{
-        text-align:center;
-    }
-
-    .achievement-card img{
-        height:auto;
-    }
-
-    .gallery-item img{
-        height:auto;
-    }
-
-    .video-card iframe{
-        height:230px;
+    .footer-grid{
+        grid-template-columns:1fr;
     }
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     TOP BAR
-========================= -->
+<!-- TOP BAR -->
 
 <div class="topbar">
-
     <div class="container topbar-content">
+        <div>Professional Education • Career Development • Skills Training</div>
 
-        <span>
-            Professional Education • Career Development • Skills Training
-        </span>
-
-        <span>
-            📧
+        <div>
             <a href="mailto:drabdikadircareerdevelopment@gmail.com">
                 drabdikadircareerdevelopment@gmail.com
             </a>
-        </span>
-
+        </div>
     </div>
-
 </div>
 
-
-
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
-
     <div class="container navbar">
 
         <a href="#home" class="brand">
+            <img src="1000110824.jpg" alt="DACDI Logo">
 
-            <img
-                src="1000110824.jpg"
-                alt="DACDI Logo">
+            <div class="brand-text">
+                <strong>DACDI</strong>
+                <span>Dr Abdikadir Career Development Institute</span>
+            </div>
+        </a>
 
-            <div>
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">
+            ☰
+        </button>
 
-                <div class="brand-name">
-                    DACDI
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#founder">Founder</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+            <li><a href="#achievements">Learners</a></li>
+            <li><a href="#application">Apply</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                Professional Learning & Career Development
+            </div>
+
+            <h1>
+                Building Skills.<br>
+                <span>Creating Opportunities.</span>
+            </h1>
+
+            <p>
+                Dr Abdikadir Career Development Institute (DACDI)
+                is committed to providing practical education,
+                professional development and career-focused skills
+                that help learners prepare for meaningful opportunities.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#application" class="btn btn-primary">
+                    Apply / Register Interest
+                </a>
+
+                <a href="https://wa.me/252639360772"
+                   class="btn btn-outline"
+                   target="_blank">
+                    Contact on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image-card">
+            <img src="FB_IMG_1789365328830.jpg"
+                 alt="DACDI Professional Training">
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="small-title">About DACDI</div>
+
+            <h2>Developing People for a Better Future</h2>
+
+            <p>
+                DACDI focuses on practical learning, career development,
+                leadership and professional skills for young people,
+                professionals and communities.
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+                <h3>Our Mission</h3>
+
+                <p>
+                    To provide accessible and practical education,
+                    professional training and career development
+                    opportunities that empower individuals to build
+                    skills, confidence and meaningful careers.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>Our Vision</h3>
+
+                <p>
+                    To become a trusted center for professional education,
+                    career development and practical skills training,
+                    connecting learners with opportunities locally,
+                    across Africa and beyond.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="about-card" style="margin-top:25px;">
+
+            <h3>Our Core Values</h3>
+
+            <div class="values">
+
+                <div class="value">
+                    <h4>Integrity</h4>
+                    <p>Promoting honesty, responsibility and ethical conduct.</p>
                 </div>
 
-                <span class="brand-full">
-                    Dr Abdikadir Career Development Institute
-                </span>
+                <div class="value">
+                    <h4>Excellence</h4>
+                    <p>Encouraging quality learning and continuous improvement.</p>
+                </div>
+
+                <div class="value">
+                    <h4>Empowerment</h4>
+                    <p>Helping learners develop confidence and practical abilities.</p>
+                </div>
+
+                <div class="value">
+                    <h4>Opportunity</h4>
+                    <p>Connecting skills development with career and professional opportunities.</p>
+                </div>
 
             </div>
 
-        </a>
-
-
-        <nav class="nav-links" id="navLinks">
-
-            <a href="#home">Home</a>
-
-            <a href="#about">About</a>
-
-            <a href="#founder">Founder</a>
-
-            <a href="#programs">Programs</a>
-
-            <a href="#achievements">Achievements</a>
-
-            <a href="#announcements">News</a>
-
-            <a href="#register" class="nav-apply">
-                Apply
-            </a>
-
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-
-        <button
-            class="menu-btn"
-            id="menuBtn"
-            aria-label="Open Menu">
-
-            ☰
-
-        </button>
+        </div>
 
     </div>
 
-</header>
+</section>
 
+<!-- FOUNDER -->
 
+<section class="founder" id="founder">
 
-<main>
+    <div class="container founder-grid">
 
+        <div class="founder-photo">
+            <img src="1000110825.jpg"
+                 alt="Dr Abdikadir Said Jama">
+        </div>
 
-<!-- =========================
-     HERO
-========================= -->
+        <div class="founder-content">
 
-<section class="hero" id="home">
+            <div class="label">Founder & Leadership</div>
 
-    <div class="container hero-grid">
+            <h2>Dr Abdikadir Said Jama</h2>
 
-        <div>
-
-            <div class="eyebrow">
-                DACDI • Learning • Skills • Opportunity
-            </div>
-
-
-            <h1>
-
-                Building Skills.
-                <span>Creating Opportunities.</span>
-
-            </h1>
-
-
-            <p class="hero-text">
-
-                Dr Abdikadir Career Development Institute provides
-                practical learning, professional development and
-                skills-based training opportunities for learners
-                and professionals.
-
+            <p>
+                Dr Abdikadir Said Jama is the founder of
+                Dr Abdikadir Career Development Institute (DACDI),
+                an initiative focused on education, professional
+                development and practical career skills.
             </p>
 
+            <p>
+                Through DACDI, the institute seeks to support learners
+                with relevant knowledge, practical training and
+                professional development opportunities.
+            </p>
 
-            <div class="hero-actions">
+        </div>
 
-                <a
-                    href="#register"
-                    class="btn btn-primary">
+    </div>
 
-                    Register Your Interest
+</section>
 
-                </a>
+<!-- PROGRAMS -->
 
+<section class="programs" id="programs">
 
-                <a
-                    href="https://wa.me/252639360772?text=Hello%20DACDI%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20training%20programs."
-                    target="_blank"
-                    class="btn btn-gold">
+    <div class="container">
 
-                    Chat on WhatsApp
+        <div class="section-heading">
+            <div class="small-title">Programs & Training Areas</div>
 
-                </a>
+            <h2>What We Offer</h2>
 
+            <p>
+                DACDI offers professional and practical training areas.
+                Specific training dates and registration opportunities
+                are announced when programs become available.
+            </p>
+        </div>
 
-                <a
-                    href="https://www.facebook.com/share/1cKEte2QAG/"
-                    target="_blank"
-                    class="btn btn-outline">
+        <div class="program-grid">
 
-                    Visit Facebook
-
-                </a>
-
+            <div class="program-card">
+                <div class="program-icon">📊</div>
+                <h3>NGO Management & Project Cycle Management</h3>
+                <p>
+                    Practical knowledge in NGO operations,
+                    project planning and project cycle management.
+                </p>
             </div>
 
+            <div class="program-card">
+                <div class="program-icon">🌍</div>
+                <h3>Humanitarian Crisis Management</h3>
+                <p>
+                    Learning areas related to humanitarian response,
+                    crisis management and professional practice.
+                </p>
+            </div>
 
-            <p class="hero-note">
+            <div class="program-card">
+                <div class="program-icon">📝</div>
+                <h3>Humanitarian Report Writing</h3>
+                <p>
+                    Practical skills for preparing professional
+                    humanitarian and development reports.
+                </p>
+            </div>
 
-                Training programs and schedules are announced
-                as opportunities become available.
+            <div class="program-card">
+                <div class="program-icon">🤝</div>
+                <h3>UN Volunteers (UNV) Success Training</h3>
+                <p>
+                    Guidance on CVs, cover letters, profiles,
+                    applications and interview preparation.
+                </p>
+            </div>
 
+            <div class="program-card">
+                <div class="program-icon">🎓</div>
+                <h3>International Conferences & Scholarships</h3>
+                <p>
+                    Practical guidance on preparing for international
+                    opportunities, conferences and scholarships.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">👥</div>
+                <h3>Leadership & Capacity Building</h3>
+                <p>
+                    Developing leadership, communication,
+                    teamwork and professional capacity.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">📚</div>
+                <h3>Diploma in Humanitarian & NGO Management</h3>
+                <p>
+                    A professional learning pathway focused on
+                    humanitarian and NGO management.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">💼</div>
+                <h3>Professional Development</h3>
+                <p>
+                    Skills and knowledge designed to support
+                    professional growth and workplace readiness.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">🚀</div>
+                <h3>Career Development</h3>
+                <p>
+                    Practical career guidance and employability
+                    skills for learners and professionals.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="status-note">
+            <strong>Important:</strong>
+            DACDI does not imply that every program is currently open.
+            Training dates and registration opportunities will be
+            announced through the institute's official communication channels.
+        </div>
+
+    </div>
+
+</section>
+    <!-- ANNOUNCEMENTS -->
+
+<section class="announcements" id="announcements">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="small-title">Latest Updates</div>
+
+            <h2>Announcements</h2>
+
+            <p>
+                Important training opportunities, events and institute
+                updates will be published here.
+            </p>
+        </div>
+
+        <div class="announcement-grid">
+
+            <div class="announcement-card">
+                <span class="announcement-date">Latest Update</span>
+
+                <h3>Training Opportunities</h3>
+
+                <p>
+                    New training opportunities will be announced here
+                    whenever registration is open.
+                </p>
+            </div>
+
+            <div class="announcement-card">
+                <span class="announcement-date">DACDI Update</span>
+
+                <h3>Professional Development</h3>
+
+                <p>
+                    Follow DACDI's official communication channels
+                    for upcoming programs and learning opportunities.
+                </p>
+            </div>
+
+            <div class="announcement-card">
+                <span class="announcement-date">Stay Connected</span>
+
+                <h3>Connect With DACDI</h3>
+
+                <p>
+                    Stay connected with DACDI to receive information
+                    about upcoming trainings, events and opportunities.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY DACDI -->
+
+<section class="why" id="why">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="small-title">Why DACDI</div>
+
+            <h2>Learning With Purpose</h2>
+
+            <p>
+                DACDI focuses on practical knowledge, professional
+                development and opportunities for continuous growth.
+            </p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div class="icon">🎯</div>
+                <h3>Practical Learning</h3>
+                <p>
+                    Training designed around useful professional skills
+                    and practical knowledge.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">🌍</div>
+                <h3>Global Opportunities</h3>
+                <p>
+                    Supporting learners as they prepare for local,
+                    African and international opportunities.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">💡</div>
+                <h3>Career Focused</h3>
+                <p>
+                    Helping learners develop skills relevant to their
+                    professional and career goals.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">🤝</div>
+                <h3>Empowerment</h3>
+                <p>
+                    Encouraging confidence, leadership and lifelong
+                    learning.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STUDENT ACHIEVEMENTS -->
+
+<section class="achievements" id="achievements">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="small-title">Our Learners</div>
+
+            <h2>Student Achievements</h2>
+
+            <p>
+                Celebrating learners who complete DACDI training
+                and continue developing their professional skills.
+            </p>
+        </div>
+
+        <div class="student-grid">
+
+            <!-- Student 1 -->
+            <div class="student-card">
+                <img src="student1.jpg"
+                     alt="DACDI Student Achievement">
+
+                <div class="student-info">
+                    <h3>Training Completion</h3>
+                    <p>
+                        Congratulations on completing DACDI training.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Student 2 -->
+            <div class="student-card">
+                <img src="student2.jpg"
+                     alt="DACDI Student Achievement">
+
+                <div class="student-info">
+                    <h3>Training Completion</h3>
+                    <p>
+                        Congratulations on completing DACDI training.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Student 3 -->
+            <div class="student-card">
+                <img src="student3.jpg"
+                     alt="DACDI Student Achievement">
+
+                <div class="student-info">
+                    <h3>Training Completion</h3>
+                    <p>
+                        Congratulations on completing DACDI training.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Student 4 -->
+            <div class="student-card">
+                <img src="student4.jpg"
+                     alt="DACDI Student Achievement">
+
+                <div class="student-info">
+                    <h3>Training Completion</h3>
+                    <p>
+                        Congratulations on completing DACDI training.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Student 5 -->
+            <div class="student-card">
+                <img src="student5.jpg"
+                     alt="DACDI Student Achievement">
+
+                <div class="student-info">
+                    <h3>Training Completion</h3>
+                    <p>
+                        Congratulations on completing DACDI training.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPLICATION -->
+
+<section class="application" id="application">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="small-title">General Application</div>
+
+            <h2>Register Your Interest</h2>
+
+            <p>
+                If you are interested in a DACDI program or training,
+                complete the form below. Your information will be
+                sent to DACDI through WhatsApp.
+            </p>
+        </div>
+
+        <div class="form-box">
+
+            <form onsubmit="sendToWhatsApp(event)">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="phone">Phone / WhatsApp</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group full">
+                        <label for="program">Program / Training Area</label>
+
+                        <select id="program" required>
+
+                            <option value="">
+                                Select a program
+                            </option>
+
+                            <option>
+                                NGO Management & Project Cycle Management
+                            </option>
+
+                            <option>
+                                Humanitarian Crisis Management
+                            </option>
+
+                            <option>
+                                Humanitarian Report Writing
+                            </option>
+
+                            <option>
+                                UN Volunteers (UNV) Success Training
+                            </option>
+
+                            <option>
+                                International Conferences & Scholarships
+                            </option>
+
+                            <option>
+                                Leadership & Capacity Building
+                            </option>
+
+                            <option>
+                                Diploma in Humanitarian & NGO Management
+                            </option>
+
+                            <option>
+                                Professional Development
+                            </option>
+
+                            <option>
+                                Career Development
+                            </option>
+
+                            <option>
+                                Other / General Inquiry
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="form-group full">
+                        <label for="message">Message</label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Tell us what you need or which training you are interested in..."
+                        ></textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="form-submit">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+                        Submit via WhatsApp
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="small-title">Frequently Asked Questions</div>
+
+            <h2>FAQ</h2>
+
+            <p>
+                Answers to some common questions about DACDI.
             </p>
 
         </div>
 
 
+        <div class="faq-grid">
 
-        <div class="hero-image-card">
+            <div class="faq-item">
 
-        
+                <h3>
+                    Are all DACDI programs currently open for registration?
+                </h3>
+
+                <p>
+                    No. Training opportunities are announced according
+                    to availability. Please check our announcements or
+                    contact DACDI for current opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <h3>
+                    How can I register for a training?
+                </h3>
+
+                <p>
+                    You can use the general application form on this
+                    website or contact DACDI through WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <h3>
+                    Where is DACDI located?
+                </h3>
+
+                <p>
+                    DACDI operates from Somaliland and provides
+                    learning opportunities through online and
+                    professional training activities.
+                </p>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <h3>
+                    How can I contact DACDI?
+                </h3>
+
+                <p>
+                    You can contact the institute by email, WhatsApp
+                    or through our official Facebook page.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="small-title">Get In Touch</div>
+
+            <h2>Contact DACDI</h2>
+
+            <p>
+                For training information, applications, partnerships
+                and professional inquiries, contact us through the
+                channels below.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>Institute Contact</h3>
+
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:drabdikadircareerdevelopment@gmail.com">
+                        drabdikadircareerdevelopment@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>WhatsApp:</strong><br>
+                    <a href="https://wa.me/252639360772"
+                       target="_blank">
+                        +252 63 9360772
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Location:</strong><br>
+                    Somaliland
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>Connect With Us</h3>
+
+                <p>
+                    Follow DACDI and stay connected with our latest
+                    training announcements and professional
+                    development opportunities.
+                </p>
+
+                <div class="social-buttons">
+
+                    <a
+                        href="https://www.facebook.com/share/1cKEte2QAG/"
+                        target="_blank"
+                        class="social-btn">
+                        Facebook Page
+                    </a>
+
+                    <a
+                        href="https://wa.me/252639360772"
+                        target="_blank"
+                        class="social-btn">
+                        WhatsApp
+                    </a>
+
+                    <a
+                        href="mailto:drabdikadircareerdevelopment@gmail.com"
+                        class="social-btn">
+                        Email Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-col">
+
+                <h3>DACDI</h3>
+
+                <p>
+                    Dr Abdikadir Career Development Institute is
+                    committed to professional education, career
+                    development and practical skills training.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#founder">Founder</a>
+                    </li>
+
+                    <li>
+                        <a href="#programs">Programs</a>
+                    </li>
+
+                    <li>
+                        <a href="#announcements">Announcements</a>
+                    </li>
+
+                    <li>
+                        <a href="#achievements">Learners</a>
+                    </li>
+
+                    <li>
+                        <a href="#application">Apply</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h3>Contact</h3>
+
+                <p>
+                    Email:<br>
+                    drabdikadircareerdevelopment@gmail.com
+                </p>
+
+                <p>
+                    WhatsApp:<br>
+                    +252 63 9360772
+                </p>
+
+                <p>
+                    Somaliland
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 DACDI – Dr Abdikadir Career Development Institute.
+            All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+    href="https://wa.me/252639360772"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Contact DACDI on WhatsApp">
+    ☎
+</a>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function toggleMenu(){
+
+    const nav = document.getElementById("navLinks");
+
+    nav.classList.toggle("active");
+
+}
+
+
+document.querySelectorAll("#navLinks a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document.getElementById("navLinks").classList.remove("active");
+
+    });
+
+});
+
+
+function sendToWhatsApp(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const program =
+        document.getElementById("program").value;
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    const whatsappMessage =
+        "Hello DACDI,%0A%0A" +
+        "I would like to register my interest in a DACDI training.%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Program: " + encodeURIComponent(program) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+
+    const whatsappURL =
+        "https://wa.me/252639360772?text=" +
+        whatsappMessage;
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+    </html>
